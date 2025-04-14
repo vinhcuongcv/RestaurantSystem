@@ -1,0 +1,13 @@
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe.config
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.exe
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\bin\Debug\QuanLyQuanCafe.pdb
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.AssemblyReference.cache
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.Properties.Resources.resources
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.GenerateResource.cache
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.csproj.CoreCompileInputs.cache
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.exe
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.pdb
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fDangNhap.resources
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fTableManeger.resources
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fAcccoutProfile.resources
+D:\LTCoSoDuLieu\CoffeeManagementSystem\QuanLyQuanCafe\QuanLyQuanCafe\obj\Debug\QuanLyQuanCafe.fAdmin.resources

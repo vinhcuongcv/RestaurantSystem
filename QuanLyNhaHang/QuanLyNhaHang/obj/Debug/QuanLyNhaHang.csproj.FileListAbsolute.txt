@@ -1,0 +1,13 @@
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe.config
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.exe
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\QuanLyNhaHang.pdb
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.AssemblyReference.cache
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fAcccoutProfile.resources
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fAdmin.resources
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fLogin.resources
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fTableManeger.resources
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.Properties.Resources.resources
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.GenerateResource.cache
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.csproj.CoreCompileInputs.cache
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.exe
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.pdb
