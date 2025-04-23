@@ -39,6 +39,7 @@ namespace QuanLyNhaHang
         void ChangeAccount(int type)
         {
             adminToolStripMenuItem.Enabled = type == 1;
+            thôngTinTàiKhoảnToolStripMenuItem.Text += " (" + LoginAccount.DisplayName + ")";
         }
         void LoadCategory()
         {
@@ -119,7 +120,7 @@ namespace QuanLyNhaHang
 
         private void ThongTinToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAcccoutProfile f = new fAcccoutProfile();
+            fAcccoutProfile f = new fAcccoutProfile(LoginAccount);
             f.ShowDialog();
         }
 
@@ -143,8 +144,14 @@ namespace QuanLyNhaHang
 
         private void thôngTinCáNhânToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            fAcccoutProfile f = new fAcccoutProfile();
+            fAcccoutProfile f = new fAcccoutProfile(LoginAccount);
+            f.UpdateAccountEvent += f_UpdateAccountEvent;   
             f.ShowDialog();
+        }
+
+        private void  f_UpdateAccountEvent(object sender,  AccountEvent e)
+        {
+            thôngTinTàiKhoảnToolStripMenuItem.Text = "Thông tin tài khoản (" + e.Acc.DisplayName + ")";
         }
 
         private void cbCategory_SelectedIndexChanged(object sender, EventArgs e)
@@ -226,6 +233,11 @@ namespace QuanLyNhaHang
                 loadTable();
             }    
 
+        }
+
+        private void đăngXuấtToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

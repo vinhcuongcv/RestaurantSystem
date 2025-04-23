@@ -23,6 +23,11 @@ namespace QuanLyNhaHang.DAO
             DataTable data = DataProvider.Instance.ExcuteQuery(query);
             return data.Rows.Count > 0;
         }
+        public bool UpdateAccount(string username, string displayName, string password ,string newpassword)
+        {
+            int result = DataProvider.Instance.ExcuteNonQuery("EXEC USP_UpdateAccount @userName , @displayName , @password , @newPassword", new object[] { username, displayName, password, newpassword });
+            return result > 0;
+        }
         public Account GetAcountByUserName(string username)
         {
             DataTable data = DataProvider.Instance.ExcuteQuery("select * from dbo.Account where UserName = N'" + username + "'");

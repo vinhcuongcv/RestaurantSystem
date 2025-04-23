@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txbUserName = new System.Windows.Forms.TextBox();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txbPassWord = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txbNewPassWord = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txbConfirmPassWord = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.btnThoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -52,21 +52,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên đăng nhập :";
             // 
-            // textBox1
+            // txbUserName
             // 
-            this.textBox1.Location = new System.Drawing.Point(84, 68);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(285, 34);
-            this.textBox1.TabIndex = 1;
+            this.txbUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbUserName.Location = new System.Drawing.Point(84, 68);
+            this.txbUserName.Multiline = true;
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.Size = new System.Drawing.Size(285, 34);
+            this.txbUserName.TabIndex = 1;
             // 
-            // textBox4
+            // txbDisplayName
             // 
-            this.textBox4.Location = new System.Drawing.Point(84, 136);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(285, 34);
-            this.textBox4.TabIndex = 7;
+            this.txbDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbDisplayName.Location = new System.Drawing.Point(84, 136);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(285, 34);
+            this.txbDisplayName.TabIndex = 7;
             // 
             // label4
             // 
@@ -78,13 +80,15 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Tên hiển thị";
             // 
-            // textBox2
+            // txbPassWord
             // 
-            this.textBox2.Location = new System.Drawing.Point(84, 211);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(285, 34);
-            this.textBox2.TabIndex = 9;
+            this.txbPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbPassWord.Location = new System.Drawing.Point(84, 211);
+            this.txbPassWord.Multiline = true;
+            this.txbPassWord.Name = "txbPassWord";
+            this.txbPassWord.PasswordChar = '*';
+            this.txbPassWord.Size = new System.Drawing.Size(285, 34);
+            this.txbPassWord.TabIndex = 9;
             // 
             // label2
             // 
@@ -96,13 +100,15 @@
             this.label2.TabIndex = 8;
             this.label2.Text = "Mật khẩu :";
             // 
-            // textBox3
+            // txbNewPassWord
             // 
-            this.textBox3.Location = new System.Drawing.Point(84, 286);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(285, 34);
-            this.textBox3.TabIndex = 11;
+            this.txbNewPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbNewPassWord.Location = new System.Drawing.Point(84, 286);
+            this.txbNewPassWord.Multiline = true;
+            this.txbNewPassWord.Name = "txbNewPassWord";
+            this.txbNewPassWord.PasswordChar = '*';
+            this.txbNewPassWord.Size = new System.Drawing.Size(285, 34);
+            this.txbNewPassWord.TabIndex = 11;
             // 
             // label3
             // 
@@ -114,13 +120,15 @@
             this.label3.TabIndex = 10;
             this.label3.Text = "Mật khẩu mới :";
             // 
-            // textBox5
+            // txbConfirmPassWord
             // 
-            this.textBox5.Location = new System.Drawing.Point(84, 347);
-            this.textBox5.Multiline = true;
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(285, 34);
-            this.textBox5.TabIndex = 13;
+            this.txbConfirmPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbConfirmPassWord.Location = new System.Drawing.Point(84, 347);
+            this.txbConfirmPassWord.Multiline = true;
+            this.txbConfirmPassWord.Name = "txbConfirmPassWord";
+            this.txbConfirmPassWord.PasswordChar = '*';
+            this.txbConfirmPassWord.Size = new System.Drawing.Size(285, 34);
+            this.txbConfirmPassWord.TabIndex = 13;
             // 
             // label5
             // 
@@ -132,17 +140,18 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Nhập lại mật khẩu :";
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(99)))), ((int)(((byte)(102)))));
-            this.button1.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(84, 405);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 35);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Cập nhật";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnUpdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(99)))), ((int)(((byte)(102)))));
+            this.btnUpdate.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnUpdate.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btnUpdate.Location = new System.Drawing.Point(84, 405);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(123, 35);
+            this.btnUpdate.TabIndex = 14;
+            this.btnUpdate.Text = "Cập nhật";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnThoat
             // 
@@ -163,16 +172,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 503);
             this.Controls.Add(this.btnThoat);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.btnUpdate);
+            this.Controls.Add(this.txbConfirmPassWord);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txbNewPassWord);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txbPassWord);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.txbDisplayName);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txbUserName);
             this.Controls.Add(this.label1);
             this.Name = "fAcccoutProfile";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -185,16 +194,16 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txbUserName;
+        private System.Windows.Forms.TextBox txbDisplayName;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txbPassWord;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txbNewPassWord;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txbConfirmPassWord;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnThoat;
     }
 }
