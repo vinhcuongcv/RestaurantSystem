@@ -76,17 +76,18 @@
             this.button5 = new System.Windows.Forms.Button();
             this.tpTaiKhoan = new System.Windows.Forms.TabPage();
             this.btnResetAcc = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.txbUserName = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.btnXoaAcc = new System.Windows.Forms.Button();
             this.btnSuaAcc = new System.Windows.Forms.Button();
-            this.btnXemAcc = new System.Windows.Forms.Button();
+            this.bntShowAccount = new System.Windows.Forms.Button();
             this.btnThemAcc = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.nmAccountType = new System.Windows.Forms.NumericUpDown();
             this.tcAdmin.SuspendLayout();
             this.tpDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongKe)).BeginInit();
@@ -111,6 +112,7 @@
             this.panel25.SuspendLayout();
             this.tpTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmAccountType)).BeginInit();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -587,17 +589,18 @@
             // 
             // tpTaiKhoan
             // 
+            this.tpTaiKhoan.Controls.Add(this.nmAccountType);
+            this.tpTaiKhoan.Controls.Add(this.label10);
             this.tpTaiKhoan.Controls.Add(this.btnResetAcc);
-            this.tpTaiKhoan.Controls.Add(this.comboBox1);
-            this.tpTaiKhoan.Controls.Add(this.textBox9);
-            this.tpTaiKhoan.Controls.Add(this.textBox8);
+            this.tpTaiKhoan.Controls.Add(this.txbDisplayName);
+            this.tpTaiKhoan.Controls.Add(this.txbUserName);
             this.tpTaiKhoan.Controls.Add(this.label9);
             this.tpTaiKhoan.Controls.Add(this.label6);
             this.tpTaiKhoan.Controls.Add(this.label5);
             this.tpTaiKhoan.Controls.Add(this.dtgvAccount);
             this.tpTaiKhoan.Controls.Add(this.btnXoaAcc);
             this.tpTaiKhoan.Controls.Add(this.btnSuaAcc);
-            this.tpTaiKhoan.Controls.Add(this.btnXemAcc);
+            this.tpTaiKhoan.Controls.Add(this.bntShowAccount);
             this.tpTaiKhoan.Controls.Add(this.btnThemAcc);
             this.tpTaiKhoan.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.tpTaiKhoan.Location = new System.Drawing.Point(4, 28);
@@ -615,32 +618,25 @@
             this.btnResetAcc.Name = "btnResetAcc";
             this.btnResetAcc.Size = new System.Drawing.Size(180, 63);
             this.btnResetAcc.TabIndex = 11;
-            this.btnResetAcc.Text = "Đặt lại mật khẩu";
+            this.btnResetAcc.Text = "Đặt lại mật khẩu mặc định";
             this.btnResetAcc.UseVisualStyleBackColor = true;
+            this.btnResetAcc.Click += new System.EventHandler(this.btnResetAcc_Click);
             // 
-            // comboBox1
+            // txbDisplayName
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(731, 264);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(239, 30);
-            this.comboBox1.TabIndex = 10;
+            this.txbDisplayName.Location = new System.Drawing.Point(731, 186);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(239, 32);
+            this.txbDisplayName.TabIndex = 9;
             // 
-            // textBox9
+            // txbUserName
             // 
-            this.textBox9.Location = new System.Drawing.Point(731, 186);
-            this.textBox9.Multiline = true;
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(239, 32);
-            this.textBox9.TabIndex = 9;
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(731, 108);
-            this.textBox8.Multiline = true;
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(239, 32);
-            this.textBox8.TabIndex = 8;
+            this.txbUserName.Location = new System.Drawing.Point(731, 108);
+            this.txbUserName.Multiline = true;
+            this.txbUserName.Name = "txbUserName";
+            this.txbUserName.Size = new System.Drawing.Size(239, 32);
+            this.txbUserName.TabIndex = 8;
             // 
             // label9
             // 
@@ -692,6 +688,7 @@
             this.btnXoaAcc.TabIndex = 3;
             this.btnXoaAcc.Text = "Xóa";
             this.btnXoaAcc.UseVisualStyleBackColor = true;
+            this.btnXoaAcc.Click += new System.EventHandler(this.btnXoaAcc_Click);
             // 
             // btnSuaAcc
             // 
@@ -702,16 +699,18 @@
             this.btnSuaAcc.TabIndex = 2;
             this.btnSuaAcc.Text = "Sửa";
             this.btnSuaAcc.UseVisualStyleBackColor = true;
+            this.btnSuaAcc.Click += new System.EventHandler(this.btnSuaAcc_Click);
             // 
-            // btnXemAcc
+            // bntShowAccount
             // 
-            this.btnXemAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.btnXemAcc.Location = new System.Drawing.Point(355, 16);
-            this.btnXemAcc.Name = "btnXemAcc";
-            this.btnXemAcc.Size = new System.Drawing.Size(91, 55);
-            this.btnXemAcc.TabIndex = 1;
-            this.btnXemAcc.Text = "Xem";
-            this.btnXemAcc.UseVisualStyleBackColor = true;
+            this.bntShowAccount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.bntShowAccount.Location = new System.Drawing.Point(355, 16);
+            this.bntShowAccount.Name = "bntShowAccount";
+            this.bntShowAccount.Size = new System.Drawing.Size(91, 55);
+            this.bntShowAccount.TabIndex = 1;
+            this.bntShowAccount.Text = "Xem";
+            this.bntShowAccount.UseVisualStyleBackColor = true;
+            this.bntShowAccount.Click += new System.EventHandler(this.bntShowAccount_Click);
             // 
             // btnThemAcc
             // 
@@ -722,6 +721,31 @@
             this.btnThemAcc.TabIndex = 0;
             this.btnThemAcc.Text = "Thêm";
             this.btnThemAcc.UseVisualStyleBackColor = true;
+            this.btnThemAcc.Click += new System.EventHandler(this.btnThemAcc_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.ForeColor = System.Drawing.Color.Crimson;
+            this.label10.Location = new System.Drawing.Point(583, 500);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(318, 34);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "*Lưu ý : Type =1 tức là người dùng là admin , \r\nType = 0 nghĩa là người dùn là  u" +
+    "ser bình thường";
+            // 
+            // nmAccountType
+            // 
+            this.nmAccountType.Location = new System.Drawing.Point(731, 264);
+            this.nmAccountType.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmAccountType.Name = "nmAccountType";
+            this.nmAccountType.Size = new System.Drawing.Size(54, 30);
+            this.nmAccountType.TabIndex = 14;
             // 
             // fAdmin
             // 
@@ -764,6 +788,7 @@
             this.tpTaiKhoan.ResumeLayout(false);
             this.tpTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nmAccountType)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -813,12 +838,11 @@
         private System.Windows.Forms.TextBox txbID;
         private System.Windows.Forms.Button btnXoaAcc;
         private System.Windows.Forms.Button btnSuaAcc;
-        private System.Windows.Forms.Button btnXemAcc;
+        private System.Windows.Forms.Button bntShowAccount;
         private System.Windows.Forms.Button btnThemAcc;
         private System.Windows.Forms.Button btnResetAcc;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txbDisplayName;
+        private System.Windows.Forms.TextBox txbUserName;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -829,5 +853,7 @@
         private System.Windows.Forms.DataGridView dtvgDanhMuc;
         private System.Windows.Forms.NumericUpDown nmTotalPrice;
         private System.Windows.Forms.ComboBox cbCategory;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown nmAccountType;
     }
 }

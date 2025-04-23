@@ -38,6 +38,36 @@ namespace QuanLyNhaHang.DAO
             }
             return null;
         }
+        public DataTable GetListAccount()
+        {
+            DataTable data = DataProvider.Instance.ExcuteQuery("select UserName, DisplayName, Type from dbo.Account");
+            return data;
+        }
 
+        public bool InsertAccount(string username , string displayname , int type)
+        {
+            string query = string.Format("INSERT dbo.Account  (UserName , DisplayName , Type) Values ( N'{0}' , N'{1}'   , {2} )", username, displayname, type);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+        public bool EditAccount(string username, string displayname, int type)
+        {
+            string query = string.Format("UPDATE dbo.Account SET DisplayName = N'{1}' , Type = {2} WHERE UserName = N'{0}'", username, displayname, type);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+        public bool DeleteAccount(string username)
+        {
+            string query = string.Format("Delete dbo.Account Where UserName = N'{0}'",username);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool ResetPassword(string username)
+        {
+            string query = string.Format("UPDATE dbo.Account SET PassWord = N'0' WHERE UserName = N'{0}'", username);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
     }
 }

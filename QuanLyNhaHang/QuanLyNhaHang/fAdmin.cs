@@ -16,7 +16,10 @@ namespace QuanLyNhaHang
 {
     public partial class fAdmin : Form
     {
-        BindingSource FoodList = new BindingSource();   
+        BindingSource foodList = new BindingSource();
+        BindingSource accountList = new BindingSource();
+
+        public Account loginAccount;
         public fAdmin()
         {
             InitializeComponent();
@@ -24,12 +27,15 @@ namespace QuanLyNhaHang
         }
         void LoadAll()
         {
-            dtgvFood.DataSource = FoodList; 
+            dtgvFood.DataSource = foodList;
+            dtgvAccount.DataSource = accountList;
 
             LoadDateTimePicker();
             LoadListByDate(dtpFromDate.Value, dtpToDate.Value);
             LoadListFood();
+            LoadAccount();
             addFoodBinding();
+            addAccountBinding();
             LoadCategoryInfoCombobox(cbCategory);
         }
         private void fAdmin_Load(object sender, EventArgs e)
@@ -44,7 +50,7 @@ namespace QuanLyNhaHang
         #region Methods
         List<Food> SearchFoodByName(string name)
         {
-            List<Food> listFood = FoodDAO.Instance.SearchFoodByName(name);      
+            List<Food> listFood = FoodDAO.Instance.SearchFoodByName(name);
             return listFood;
         }
         void LoadDateTimePicker()
@@ -53,28 +59,96 @@ namespace QuanLyNhaHang
             dtpFromDate.Value = new DateTime(toDay.Year, toDay.Month, 1);
             dtpToDate.Value.AddMonths(1).AddDays(-1);
         }
-        void LoadListByDate(DateTime checkIn , DateTime checkOut)
+        void LoadListByDate(DateTime checkIn, DateTime checkOut)
         {
-            dtgvThongKe.DataSource =  BillDAO.Instance.GetListBillByDate(checkIn, checkOut);
+            dtgvThongKe.DataSource = BillDAO.Instance.GetListBillByDate(checkIn, checkOut);
         }
 
         void LoadListFood()
         {
-            FoodList.DataSource = FoodDAO.Instance.GetListFood();
+            foodList.DataSource = FoodDAO.Instance.GetListFood();
         }
 
         void addFoodBinding()
         {
-            txbFood.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Name",true,DataSourceUpdateMode.Never));
+            txbFood.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "Name", true, DataSourceUpdateMode.Never));
             txbID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "id", true, DataSourceUpdateMode.Never));
             nmTotalPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Price", true, DataSourceUpdateMode.Never));
 
         }
-
+        void LoadAccount()
+        {
+            accountList.DataSource = AccountDAO.Instance.GetListAccount();
+        }
+        void addAccountBinding()
+        {
+            txbUserName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "UserName", true, DataSourceUpdateMode.Never));
+            txbDisplayName.DataBindings.Add(new Binding("Text", dtgvAccount.DataSource, "DisplayName", true, DataSourceUpdateMode.Never));
+            nmAccountType.DataBindings.Add(new Binding("Value", dtgvAccount.DataSource, "Type", true, DataSourceUpdateMode.Never));
+        }
         void LoadCategoryInfoCombobox(ComboBox cb)
         {
-           cb.DataSource = CategoryDAO.Instance.GetListCategory();
-           cb.DisplayMember = "Name";
+            cb.DataSource = CategoryDAO.Instance.GetListCategory();
+            cb.DisplayMember = "Name";
+        }
+        void AddAccount(string username, string displayname, int type)
+        {
+            if (AccountDAO.Instance.InsertAccount(username, displayname, type))
+            {
+                MessageBox.Show("Thêm tài khoản thành công");
+                LoadAccount();
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi thêm tài khoản");
+            }
+            LoadAccount();
+
+        }
+        void EditAccount(string username, string displayname, int type)
+        {
+            if (AccountDAO.Instance.EditAccount(username, displayname, type))
+            {
+                MessageBox.Show("Cập nhật tài khoản thành công");
+                LoadAccount();
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi cập nhật tài khoản");
+            }
+            LoadAccount();
+        }
+        void DeleteAccount(string username)
+        {
+            if (loginAccount.Username.Equals(username))
+            {
+                MessageBox.Show("Không thể xóa tài khoản đang đăng nhập");
+                return; 
+            }
+            if (AccountDAO.Instance.DeleteAccount(username))
+            {
+                MessageBox.Show("Xóa tài khoản thành công");
+                LoadAccount();  
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi xóa tài khoản");
+            }
+            LoadAccount();
+        }
+
+        void ResetAccount(string username)
+        {
+            if (AccountDAO.Instance.ResetPassword(username))
+            {
+                MessageBox.Show("Reset khoản thành công");
+                LoadAccount();
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi reset tài khoản");
+            }
+            LoadAccount();
         }
         #endregion Methods
 
@@ -136,7 +210,7 @@ namespace QuanLyNhaHang
             int idCategory = (cbCategory.SelectedItem as Category).Id;
             float nmPrice = (float)nmTotalPrice.Value;
 
-            if(FoodDAO.Instance.InsertFood(name, idCategory, nmPrice))
+            if (FoodDAO.Instance.InsertFood(name, idCategory, nmPrice))
             {
                 MessageBox.Show("Thêm món thành công");
                 LoadListFood();
@@ -148,7 +222,7 @@ namespace QuanLyNhaHang
             else
             {
                 MessageBox.Show("Có lỗi khi thêm món");
-            }    
+            }
         }
 
         private void btnSua_Click(object sender, EventArgs e)
@@ -158,7 +232,7 @@ namespace QuanLyNhaHang
             float nmPrice = (float)nmTotalPrice.Value;
             int id = Convert.ToInt32(txbID.Text);
 
-            if (FoodDAO.Instance.EditFood(id,name, idCategory, nmPrice))
+            if (FoodDAO.Instance.EditFood(id, name, idCategory, nmPrice))
             {
                 MessageBox.Show("Cập nhật món ăn thành công");
                 LoadListFood();
@@ -184,10 +258,10 @@ namespace QuanLyNhaHang
             {
                 MessageBox.Show("Xóa món ăn thành công");
                 LoadListFood();
-                if(deleteFood!= null)
+                if (deleteFood != null)
                 {
                     deleteFood(this, new EventArgs());
-                }    
+                }
             }
             else
             {
@@ -215,11 +289,47 @@ namespace QuanLyNhaHang
             add { updateFood += value; }
             remove { updateFood -= value; }
         }
-        #endregion Events
-
         private void btnSearch_Click(object sender, EventArgs e)
         {
-            FoodList.DataSource = SearchFoodByName(txbSearch.Text);
+            foodList.DataSource = SearchFoodByName(txbSearch.Text);
+        }
+
+        private void bntShowAccount_Click(object sender, EventArgs e)
+        {
+            LoadAccount();
+        }
+
+        private void btnThemAcc_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            string displayname = txbDisplayName.Text;
+            int type = (int)nmAccountType.Value;
+
+            AddAccount(username, displayname, type);
+        }
+
+        private void btnSuaAcc_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            string displayname = txbDisplayName.Text;
+            int type = (int)nmAccountType.Value;
+
+            EditAccount(username, displayname, type);
+        }
+
+        private void btnXoaAcc_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+
+            DeleteAccount(username);
+        }
+
+        private void btnResetAcc_Click(object sender, EventArgs e)
+        {
+            string username = txbUserName.Text;
+            ResetAccount(username);
         }
     }
-    }
+    #endregion Events
+
+}
