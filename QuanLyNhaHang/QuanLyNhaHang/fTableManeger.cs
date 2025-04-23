@@ -134,7 +134,34 @@ namespace QuanLyNhaHang
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
+            f.InsertFood += f_InsertFood;
+            f.DeleteFood += f_DeleteFood;
+            f.UpdateFood += f_UpdateFood;
             f.ShowDialog();
+        }
+
+        private void f_UpdateFood(object sender, EventArgs e)
+        {
+            LoadListFoodByCategoryID((cbCategory.SelectedItem as Category).Id);
+            if (lvBill.Tag != null)
+                ShowBill((lvBill.Tag as Table).ID);
+            loadTable();
+        }
+
+        private void f_DeleteFood(object sender, EventArgs e)
+        {
+            LoadListFoodByCategoryID((cbCategory.SelectedItem as Category).Id);
+            if(lvBill.Tag != null)
+                ShowBill((lvBill.Tag as Table).ID);
+            loadTable();
+        }
+
+        private void f_InsertFood(object sender, EventArgs e)
+        {
+            LoadListFoodByCategoryID((cbCategory.SelectedItem as Category).Id);
+            if (lvBill.Tag != null)
+                ShowBill((lvBill.Tag as Table).ID);
+            loadTable();
         }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -172,6 +199,8 @@ namespace QuanLyNhaHang
         private void btnAddFood_Click(object sender, EventArgs e)
         {
             Table table = lvBill.Tag as Table;
+            if (table == null)
+                MessageBox.Show("Hãy chọn bàn");
             int idBill = BillDAO.Instance.GetUnCheckedBillIDByTableID(table.ID);
             int idFood = (cbFood.SelectedItem as Food).Id;
             int count = (int)nmFoodCount.Value;

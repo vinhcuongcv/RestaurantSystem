@@ -38,8 +38,10 @@
             this.tpDoUong = new System.Windows.Forms.TabPage();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.nmTotalPrice = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txbFood = new System.Windows.Forms.TextBox();
@@ -85,8 +87,6 @@
             this.btnSuaAcc = new System.Windows.Forms.Button();
             this.btnXemAcc = new System.Windows.Forms.Button();
             this.btnThemAcc = new System.Windows.Forms.Button();
-            this.nmTotalPrice = new System.Windows.Forms.NumericUpDown();
-            this.cbCategory = new System.Windows.Forms.ComboBox();
             this.tcAdmin.SuspendLayout();
             this.tpDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongKe)).BeginInit();
@@ -94,6 +94,7 @@
             this.tpDoUong.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmTotalPrice)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -110,7 +111,6 @@
             this.panel25.SuspendLayout();
             this.tpTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmTotalPrice)).BeginInit();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -223,6 +223,20 @@
             this.panel12.Size = new System.Drawing.Size(450, 74);
             this.panel12.TabIndex = 5;
             // 
+            // nmTotalPrice
+            // 
+            this.nmTotalPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.nmTotalPrice.ForeColor = System.Drawing.Color.Red;
+            this.nmTotalPrice.Location = new System.Drawing.Point(139, 20);
+            this.nmTotalPrice.Maximum = new decimal(new int[] {
+            10000000,
+            0,
+            0,
+            0});
+            this.nmTotalPrice.Name = "nmTotalPrice";
+            this.nmTotalPrice.Size = new System.Drawing.Size(293, 34);
+            this.nmTotalPrice.TabIndex = 2;
+            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -241,6 +255,16 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(450, 74);
             this.panel10.TabIndex = 4;
+            // 
+            // cbCategory
+            // 
+            this.cbCategory.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.cbCategory.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.cbCategory.FormattingEnabled = true;
+            this.cbCategory.Location = new System.Drawing.Point(139, 18);
+            this.cbCategory.Name = "cbCategory";
+            this.cbCategory.Size = new System.Drawing.Size(293, 33);
+            this.cbCategory.TabIndex = 2;
             // 
             // label3
             // 
@@ -328,6 +352,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "Tìm";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txbSearch
             // 
@@ -388,6 +413,7 @@
             this.btnXoa.TabIndex = 1;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
@@ -398,6 +424,7 @@
             this.btnSua.TabIndex = 3;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnThem
             // 
@@ -408,6 +435,7 @@
             this.btnThem.TabIndex = 0;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // tpDanhMuc
             // 
@@ -695,30 +723,6 @@
             this.btnThemAcc.Text = "Thêm";
             this.btnThemAcc.UseVisualStyleBackColor = true;
             // 
-            // nmTotalPrice
-            // 
-            this.nmTotalPrice.Font = new System.Drawing.Font("Arial", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmTotalPrice.ForeColor = System.Drawing.Color.Red;
-            this.nmTotalPrice.Location = new System.Drawing.Point(139, 20);
-            this.nmTotalPrice.Maximum = new decimal(new int[] {
-            10000000,
-            0,
-            0,
-            0});
-            this.nmTotalPrice.Name = "nmTotalPrice";
-            this.nmTotalPrice.Size = new System.Drawing.Size(293, 34);
-            this.nmTotalPrice.TabIndex = 2;
-            // 
-            // cbCategory
-            // 
-            this.cbCategory.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.cbCategory.Font = new System.Drawing.Font("Arial", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(139, 18);
-            this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(293, 33);
-            this.cbCategory.TabIndex = 2;
-            // 
             // fAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -736,6 +740,7 @@
             this.panel5.ResumeLayout(false);
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nmTotalPrice)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -759,7 +764,6 @@
             this.tpTaiKhoan.ResumeLayout(false);
             this.tpTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nmTotalPrice)).EndInit();
             this.ResumeLayout(false);
 
         }

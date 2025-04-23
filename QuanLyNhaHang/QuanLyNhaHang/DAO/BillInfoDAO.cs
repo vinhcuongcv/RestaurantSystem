@@ -37,5 +37,9 @@ namespace QuanLyNhaHang.DAO
         {
             DataProvider.Instance.ExcuteNonQuery("Exec USP_InsertBillInfo @idBill , @idFood , @count", new Object[] {idBill,idFood,count});
         }
+        public void DeleteBillInfoByFoodID(int id)
+        {
+            DataProvider.Instance.ExcuteNonQuery("DELETE dbo.BillInfo WHERE idFood = " + id);
+        }
     }
 }
