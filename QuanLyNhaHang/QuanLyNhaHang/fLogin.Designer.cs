@@ -174,6 +174,7 @@ namespace QuanLyNhaHang
             this.txtPassWord.Location = new System.Drawing.Point(529, 251);
             this.txtPassWord.Multiline = true;
             this.txtPassWord.Name = "txtPassWord";
+            this.txtPassWord.PasswordChar = '*';
             this.txtPassWord.Size = new System.Drawing.Size(204, 34);
             this.txtPassWord.TabIndex = 5;
             // 

@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Text.RegularExpressions;
 
 namespace QuanLyNhaHang
 {
@@ -176,19 +177,29 @@ namespace QuanLyNhaHang
             int idBill = BillDAO.Instance.GetUnCheckedBillIDByTableID(table.ID);
             float discount = (float)nmDiscount.Value;
 
-            float totalPrice = (float)Convert.ToDouble(txbTotalPrice.Text.Split(' ')[0]);
+            // Xử lý chuỗi số tiền
+            string raw = new string(txbTotalPrice.Text.Where(char.IsDigit).ToArray());
+            raw = raw.Replace(".", "");  // Xóa dấu phân cách hàng nghìn (nếu có)
+
+            // Chuyển đổi chuỗi thành số tiền
+            float totalPrice = float.Parse(raw);
             float finalTotalPrice = totalPrice - (totalPrice / 100 * discount);
-            if(idBill != -1)
+
+            // Kiểm tra hóa đơn chưa thanh toán
+            if (idBill != -1)
             {
-                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn " + table.Name + "\n Tổng tiền - (Tổng tiền/100) x Giảm giá = {0} - ({0}/100 x {1}) = {2}", totalPrice,discount,finalTotalPrice), "Thông báo", MessageBoxButtons.OKCancel) == System.Windows.Forms.DialogResult.OK)
+                // Hiển thị thông báo thanh toán
+                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền/100) x Giảm giá = {1} - ({1}/100 x {2}) = {3}",
+                                                  table.Name, totalPrice, discount, finalTotalPrice),
+                                    "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
-                    BillDAO.Instance.CheckOut(idBill,discount);
+                    // Cập nhật thông tin thanh toán
+                    BillDAO.Instance.CheckOut(idBill, discount, finalTotalPrice);
                     ShowBill(table.ID);
-
                     loadTable();
-
                 }
             }
+
 
         }
 

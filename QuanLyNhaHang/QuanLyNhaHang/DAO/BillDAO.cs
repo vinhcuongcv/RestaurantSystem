@@ -35,10 +35,15 @@ namespace QuanLyNhaHang.DAO
             DataProvider.Instance.ExcuteNonQuery("Exec USP_InsertBill @idTable", new Object[] { id });
         }
 
-        public void CheckOut(int id,float discount)
+        public void CheckOut(int id,float discount, float totalPrice)
         {
-            string query = "UPDATE dbo.Bill set status = 1, discount = "+discount +  "where id = "+ id;
+            string query = "UPDATE dbo.Bill set dateCheckOut = GetDate() , status = 1, discount = "+discount+",totalPrice = " + totalPrice +  "where id = "+ id;
             DataProvider.Instance.ExcuteNonQuery(query);    
+        }
+
+        public DataTable GetListBillByDate(DateTime checkIn,DateTime checkOut)
+        {
+            return DataProvider.Instance.ExcuteQuery("EXEC USP_GetListBillByDate @dateCheckIn , @dateCheckOut", new object[] { checkIn, checkOut });
         }
 
         public int GetMaxIDBill()

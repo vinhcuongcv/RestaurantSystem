@@ -17,23 +17,37 @@ namespace QuanLyNhaHang
         public fAdmin()
         {
             InitializeComponent();
-            //loadAccountList();
-            dtgAccount.DataSource = DataProvider.Instance.ExcuteQuery("select * from dbo.Account where UserName =  N'Vĩnh Cường' AND PassWord = N'' or 1=1");
+            LoadDateTimePicker();
+            LoadListByDate(dtpFromDate.Value, dtpToDate.Value);
         }
 
         private void fAdmin_Load(object sender, EventArgs e)
         {
 
         }
-        //void loadAccountList()  
-        //{
-        //    string query = "Execute dbo.USP_GetAccoutByUserName @username";
-        //    dtgAccount.DataSource = DataProvider.Instance.ExcuteQuery(query,new object[]{"Vĩnh Cường"});
-        //} 
 
         private SqlConnection SqlConnection(string v)
         {
             throw new NotImplementedException();
         }
+        #region Methods
+        void LoadDateTimePicker()
+        {
+            DateTime toDay = DateTime.Now;
+            dtpFromDate.Value = new DateTime(toDay.Year, toDay.Month, 1);
+            dtpToDate.Value.AddMonths(1).AddDays(-1);
+        }
+        void LoadListByDate(DateTime checkIn , DateTime checkOut)
+        {
+            dtgvThongKe.DataSource =  BillDAO.Instance.GetListBillByDate(checkIn, checkOut);
+        }
+        #endregion Methods
+
+        #region Events
+        private void btnThongKe_Click(object sender, EventArgs e)
+        {
+            LoadListByDate(dtpFromDate.Value, dtpToDate.Value);
+        }
+        #endregion Events
     }
 }

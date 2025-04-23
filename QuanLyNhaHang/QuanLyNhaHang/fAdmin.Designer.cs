@@ -30,7 +30,7 @@
         {
             this.tcAdmin = new System.Windows.Forms.TabControl();
             this.tpDoanhThu = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgvThongKe = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnThongKe = new System.Windows.Forms.Button();
             this.dtpToDate = new System.Windows.Forms.DateTimePicker();
@@ -82,14 +82,14 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.dtgAccount = new System.Windows.Forms.DataGridView();
+            this.dtgvAccount = new System.Windows.Forms.DataGridView();
             this.btnXoaAcc = new System.Windows.Forms.Button();
             this.btnSuaAcc = new System.Windows.Forms.Button();
             this.btnXemAcc = new System.Windows.Forms.Button();
             this.btnThemAcc = new System.Windows.Forms.Button();
             this.tcAdmin.SuspendLayout();
             this.tpDoanhThu.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongKe)).BeginInit();
             this.panel1.SuspendLayout();
             this.tpDoUong.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -109,7 +109,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.panel25.SuspendLayout();
             this.tpTaiKhoan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAccount)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -128,7 +128,7 @@
             // 
             // tpDoanhThu
             // 
-            this.tpDoanhThu.Controls.Add(this.dataGridView1);
+            this.tpDoanhThu.Controls.Add(this.dtgvThongKe);
             this.tpDoanhThu.Controls.Add(this.panel1);
             this.tpDoanhThu.Location = new System.Drawing.Point(4, 28);
             this.tpDoanhThu.Name = "tpDoanhThu";
@@ -138,15 +138,16 @@
             this.tpDoanhThu.Text = "Doanh thu";
             this.tpDoanhThu.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // dtgvThongKe
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(16, 85);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(962, 453);
-            this.dataGridView1.TabIndex = 1;
+            this.dtgvThongKe.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvThongKe.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvThongKe.Location = new System.Drawing.Point(16, 85);
+            this.dtgvThongKe.Name = "dtgvThongKe";
+            this.dtgvThongKe.RowHeadersWidth = 51;
+            this.dtgvThongKe.RowTemplate.Height = 24;
+            this.dtgvThongKe.Size = new System.Drawing.Size(962, 453);
+            this.dtgvThongKe.TabIndex = 1;
             // 
             // panel1
             // 
@@ -169,9 +170,11 @@
             this.btnThongKe.TabIndex = 2;
             this.btnThongKe.Text = "Thống kê";
             this.btnThongKe.UseVisualStyleBackColor = false;
+            this.btnThongKe.Click += new System.EventHandler(this.btnThongKe_Click);
             // 
             // dtpToDate
             // 
+            this.dtpToDate.CustomFormat = "";
             this.dtpToDate.Location = new System.Drawing.Point(639, 17);
             this.dtpToDate.Name = "dtpToDate";
             this.dtpToDate.Size = new System.Drawing.Size(300, 27);
@@ -179,6 +182,7 @@
             // 
             // dtpFromDate
             // 
+            this.dtpFromDate.CustomFormat = "";
             this.dtpFromDate.Location = new System.Drawing.Point(30, 17);
             this.dtpFromDate.Name = "dtpFromDate";
             this.dtpFromDate.Size = new System.Drawing.Size(300, 27);
@@ -193,7 +197,7 @@
             this.tpDoUong.Location = new System.Drawing.Point(4, 28);
             this.tpDoUong.Name = "tpDoUong";
             this.tpDoUong.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDoUong.Size = new System.Drawing.Size(998, 556);
+            this.tpDoUong.Size = new System.Drawing.Size(1023, 587);
             this.tpDoUong.TabIndex = 1;
             this.tpDoUong.Text = "Đồ uống";
             this.tpDoUong.UseVisualStyleBackColor = true;
@@ -422,7 +426,7 @@
             this.tpDanhMuc.Location = new System.Drawing.Point(4, 28);
             this.tpDanhMuc.Name = "tpDanhMuc";
             this.tpDanhMuc.Padding = new System.Windows.Forms.Padding(3);
-            this.tpDanhMuc.Size = new System.Drawing.Size(998, 556);
+            this.tpDanhMuc.Size = new System.Drawing.Size(1023, 587);
             this.tpDanhMuc.TabIndex = 2;
             this.tpDanhMuc.Text = "Danh mục";
             this.tpDanhMuc.UseVisualStyleBackColor = true;
@@ -569,7 +573,7 @@
             this.tpTaiKhoan.Controls.Add(this.label9);
             this.tpTaiKhoan.Controls.Add(this.label6);
             this.tpTaiKhoan.Controls.Add(this.label5);
-            this.tpTaiKhoan.Controls.Add(this.dtgAccount);
+            this.tpTaiKhoan.Controls.Add(this.dtgvAccount);
             this.tpTaiKhoan.Controls.Add(this.btnXoaAcc);
             this.tpTaiKhoan.Controls.Add(this.btnSuaAcc);
             this.tpTaiKhoan.Controls.Add(this.btnXemAcc);
@@ -578,7 +582,7 @@
             this.tpTaiKhoan.Location = new System.Drawing.Point(4, 28);
             this.tpTaiKhoan.Name = "tpTaiKhoan";
             this.tpTaiKhoan.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTaiKhoan.Size = new System.Drawing.Size(998, 556);
+            this.tpTaiKhoan.Size = new System.Drawing.Size(1023, 587);
             this.tpTaiKhoan.TabIndex = 3;
             this.tpTaiKhoan.Text = "Tài khoản";
             this.tpTaiKhoan.UseVisualStyleBackColor = true;
@@ -647,15 +651,16 @@
             this.label5.TabIndex = 5;
             this.label5.Text = "Tên tài khoản : ";
             // 
-            // dtgAccount
+            // dtgvAccount
             // 
-            this.dtgAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgAccount.Location = new System.Drawing.Point(16, 92);
-            this.dtgAccount.Name = "dtgAccount";
-            this.dtgAccount.RowHeadersWidth = 51;
-            this.dtgAccount.RowTemplate.Height = 24;
-            this.dtgAccount.Size = new System.Drawing.Size(540, 447);
-            this.dtgAccount.TabIndex = 4;
+            this.dtgvAccount.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvAccount.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvAccount.Location = new System.Drawing.Point(16, 92);
+            this.dtgvAccount.Name = "dtgvAccount";
+            this.dtgvAccount.RowHeadersWidth = 51;
+            this.dtgvAccount.RowTemplate.Height = 24;
+            this.dtgvAccount.Size = new System.Drawing.Size(540, 447);
+            this.dtgvAccount.TabIndex = 4;
             // 
             // btnXoaAcc
             // 
@@ -708,7 +713,7 @@
             this.Load += new System.EventHandler(this.fAdmin_Load);
             this.tcAdmin.ResumeLayout(false);
             this.tpDoanhThu.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvThongKe)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tpDoUong.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
@@ -736,7 +741,7 @@
             this.panel25.ResumeLayout(false);
             this.tpTaiKhoan.ResumeLayout(false);
             this.tpTaiKhoan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgAccount)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -750,7 +755,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DateTimePicker dtpFromDate;
         private System.Windows.Forms.TabPage tpTaiKhoan;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgvThongKe;
         private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.DateTimePicker dtpToDate;
         private System.Windows.Forms.Panel panel4;
@@ -801,6 +806,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dtgAccount;
+        private System.Windows.Forms.DataGridView dtgvAccount;
     }
 }
