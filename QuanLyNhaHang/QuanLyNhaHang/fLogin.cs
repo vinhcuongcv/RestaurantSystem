@@ -1,4 +1,5 @@
 ﻿using QuanLyNhaHang.DAO;
+using QuanLyNhaHang.DTO;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,8 @@ namespace QuanLyNhaHang
             string password = txtPassWord.Text;
             if (Login(username , password))
             {
-                fTableManeger f = new fTableManeger();
+                Account account = AccountDAO.Instance.GetAcountByUserName(username);
+                fTableManeger f = new fTableManeger(account);
                 this.Hide();
                 f.ShowDialog();
                 this.Show();

@@ -18,15 +18,28 @@ namespace QuanLyNhaHang
 {
     public partial class fTableManeger : Form
     {
-        public fTableManeger()
+        private Account loginAccount;
+
+        public Account LoginAccount {
+            get => loginAccount;
+            set {
+                loginAccount = value;
+                ChangeAccount(loginAccount.Type);
+            } 
+        }
+        public fTableManeger(Account acc)
         {
             InitializeComponent();
+            this.LoginAccount = acc;
             loadTable();
             LoadCategory();
             loadComboboxTable(cbSwitchTable);
         }
         #region Method
-
+        void ChangeAccount(int type)
+        {
+            adminToolStripMenuItem.Enabled = type == 1;
+        }
         void LoadCategory()
         {
             List<Category> list = CategoryDAO.Instance.GetListCategory();
@@ -97,7 +110,7 @@ namespace QuanLyNhaHang
             cb.DisplayMember = "Name";
         }
 
-        #endregion
+        #endregion Method
 
         private void DangXuatToolStripMenuItem_Click(object sender, EventArgs e)
         {
