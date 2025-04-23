@@ -46,6 +46,15 @@ namespace QuanLyNhaHang.DAO
             return DataProvider.Instance.ExcuteQuery("EXEC USP_GetListBillByDate @dateCheckIn , @dateCheckOut", new object[] { checkIn, checkOut });
         }
 
+        public DataTable GetListBillByDateAndPage(DateTime checkIn, DateTime checkOut, int pageNum)
+        {
+            return DataProvider.Instance.ExcuteQuery("EXEC USP_GetListBillByDateAndPage @checkIn , @checkOut , @page", new object[] { checkIn, checkOut, pageNum });
+        }
+        public int GetNumBillByDate(DateTime checkIn, DateTime checkOut)
+        {
+            return (int)DataProvider.Instance.ExcuteScalar("EXEC USP_GetNumBillByDate @checkIn , @checkOut", new object[] { checkIn, checkOut });
+        }
+
         public int GetMaxIDBill()
         {
             try

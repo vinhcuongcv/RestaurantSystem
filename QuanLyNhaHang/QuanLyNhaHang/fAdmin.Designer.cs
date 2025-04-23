@@ -75,6 +75,8 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.tpTaiKhoan = new System.Windows.Forms.TabPage();
+            this.nmAccountType = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnResetAcc = new System.Windows.Forms.Button();
             this.txbDisplayName = new System.Windows.Forms.TextBox();
             this.txbUserName = new System.Windows.Forms.TextBox();
@@ -86,8 +88,11 @@
             this.btnSuaAcc = new System.Windows.Forms.Button();
             this.bntShowAccount = new System.Windows.Forms.Button();
             this.btnThemAcc = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.nmAccountType = new System.Windows.Forms.NumericUpDown();
+            this.btnFirstBill = new System.Windows.Forms.Button();
+            this.btnLastBill = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.txbPageCount = new System.Windows.Forms.TextBox();
             this.tcAdmin.SuspendLayout();
             this.tpDoanhThu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongKe)).BeginInit();
@@ -111,8 +116,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtvgDanhMuc)).BeginInit();
             this.panel25.SuspendLayout();
             this.tpTaiKhoan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAccountType)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).BeginInit();
             this.SuspendLayout();
             // 
             // tcAdmin
@@ -131,6 +136,11 @@
             // 
             // tpDoanhThu
             // 
+            this.tpDoanhThu.Controls.Add(this.txbPageCount);
+            this.tpDoanhThu.Controls.Add(this.btnNext);
+            this.tpDoanhThu.Controls.Add(this.btnPrevious);
+            this.tpDoanhThu.Controls.Add(this.btnLastBill);
+            this.tpDoanhThu.Controls.Add(this.btnFirstBill);
             this.tpDoanhThu.Controls.Add(this.dtgvThongKe);
             this.tpDoanhThu.Controls.Add(this.panel1);
             this.tpDoanhThu.Location = new System.Drawing.Point(4, 28);
@@ -611,6 +621,30 @@
             this.tpTaiKhoan.Text = "Tài khoản";
             this.tpTaiKhoan.UseVisualStyleBackColor = true;
             // 
+            // nmAccountType
+            // 
+            this.nmAccountType.Location = new System.Drawing.Point(731, 264);
+            this.nmAccountType.Maximum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nmAccountType.Name = "nmAccountType";
+            this.nmAccountType.Size = new System.Drawing.Size(54, 30);
+            this.nmAccountType.TabIndex = 14;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label10.ForeColor = System.Drawing.Color.Crimson;
+            this.label10.Location = new System.Drawing.Point(583, 500);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(318, 34);
+            this.label10.TabIndex = 13;
+            this.label10.Text = "*Lưu ý : Type =1 tức là người dùng là admin , \r\nType = 0 nghĩa là người dùn là  u" +
+    "ser bình thường";
+            // 
             // btnResetAcc
             // 
             this.btnResetAcc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -723,29 +757,57 @@
             this.btnThemAcc.UseVisualStyleBackColor = true;
             this.btnThemAcc.Click += new System.EventHandler(this.btnThemAcc_Click);
             // 
-            // label10
+            // btnFirstBill
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label10.ForeColor = System.Drawing.Color.Crimson;
-            this.label10.Location = new System.Drawing.Point(583, 500);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(318, 34);
-            this.label10.TabIndex = 13;
-            this.label10.Text = "*Lưu ý : Type =1 tức là người dùng là admin , \r\nType = 0 nghĩa là người dùn là  u" +
-    "ser bình thường";
+            this.btnFirstBill.Location = new System.Drawing.Point(16, 544);
+            this.btnFirstBill.Name = "btnFirstBill";
+            this.btnFirstBill.Size = new System.Drawing.Size(110, 37);
+            this.btnFirstBill.TabIndex = 2;
+            this.btnFirstBill.Text = "First";
+            this.btnFirstBill.UseVisualStyleBackColor = true;
+            this.btnFirstBill.Click += new System.EventHandler(this.btnFirstBill_Click);
             // 
-            // nmAccountType
+            // btnLastBill
             // 
-            this.nmAccountType.Location = new System.Drawing.Point(731, 264);
-            this.nmAccountType.Maximum = new decimal(new int[] {
-            1,
-            0,
-            0,
-            0});
-            this.nmAccountType.Name = "nmAccountType";
-            this.nmAccountType.Size = new System.Drawing.Size(54, 30);
-            this.nmAccountType.TabIndex = 14;
+            this.btnLastBill.Location = new System.Drawing.Point(868, 544);
+            this.btnLastBill.Name = "btnLastBill";
+            this.btnLastBill.Size = new System.Drawing.Size(110, 37);
+            this.btnLastBill.TabIndex = 3;
+            this.btnLastBill.Text = "Last";
+            this.btnLastBill.UseVisualStyleBackColor = true;
+            this.btnLastBill.Click += new System.EventHandler(this.btnLastBill_Click);
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.Location = new System.Drawing.Point(145, 544);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(110, 37);
+            this.btnPrevious.TabIndex = 4;
+            this.btnPrevious.Text = "Previous";
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
+            // 
+            // btnNext
+            // 
+            this.btnNext.Location = new System.Drawing.Point(752, 544);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(110, 37);
+            this.btnNext.TabIndex = 5;
+            this.btnNext.Text = "Next";
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // txbPageCount
+            // 
+            this.txbPageCount.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbPageCount.Location = new System.Drawing.Point(480, 550);
+            this.txbPageCount.Name = "txbPageCount";
+            this.txbPageCount.ReadOnly = true;
+            this.txbPageCount.Size = new System.Drawing.Size(58, 30);
+            this.txbPageCount.TabIndex = 6;
+            this.txbPageCount.Text = "1";
+            this.txbPageCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txbPageCount.TextChanged += new System.EventHandler(this.txbPageCount_TextChanged);
             // 
             // fAdmin
             // 
@@ -758,6 +820,7 @@
             this.Load += new System.EventHandler(this.fAdmin_Load);
             this.tcAdmin.ResumeLayout(false);
             this.tpDoanhThu.ResumeLayout(false);
+            this.tpDoanhThu.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvThongKe)).EndInit();
             this.panel1.ResumeLayout(false);
             this.tpDoUong.ResumeLayout(false);
@@ -787,8 +850,8 @@
             this.panel25.ResumeLayout(false);
             this.tpTaiKhoan.ResumeLayout(false);
             this.tpTaiKhoan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmAccountType)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvAccount)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -855,5 +918,10 @@
         private System.Windows.Forms.ComboBox cbCategory;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.NumericUpDown nmAccountType;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnLastBill;
+        private System.Windows.Forms.Button btnFirstBill;
+        private System.Windows.Forms.TextBox txbPageCount;
     }
 }

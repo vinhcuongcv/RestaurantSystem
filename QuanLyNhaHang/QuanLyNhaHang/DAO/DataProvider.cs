@@ -114,7 +114,7 @@ namespace QuanLyNhaHang.DAO
                         {
                             if (item.Contains("@"))
                             {
-                                command.Parameters.AddWithValue(query, paramater[i]);
+                                command.Parameters.AddWithValue(item, paramater[i]);
                                 i++;
                             }
                         }

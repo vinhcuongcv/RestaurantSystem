@@ -240,7 +240,7 @@ namespace QuanLyNhaHang
             {
                 // Hiển thị thông báo thanh toán
                 if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền/100) x Giảm giá = {1} - ({1}/100 x {2}) = {3}",
-                                                  table.Name, totalPrice, discount, finalTotalPrice),
+                                                    table.Name, totalPrice, discount, finalTotalPrice),
                                     "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     // Cập nhật thông tin thanh toán
@@ -269,7 +269,17 @@ namespace QuanLyNhaHang
         {
             this.Close();
         }
+
+        private void thanhToánToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button4_Click(this , new EventArgs()); // Gọi thằng event click nút thanh toán
+        }
+
+        private void thêmMónToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            btnAddFood_Click(this, new EventArgs()); // Gọi thằng event click nút thêm món
+        }
     }
-}
+}   
 
 

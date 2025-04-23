@@ -329,6 +329,51 @@ namespace QuanLyNhaHang
             string username = txbUserName.Text;
             ResetAccount(username);
         }
+
+        private void btnFirstBill_Click(object sender, EventArgs e)
+        {
+            txbPageCount.Text = "1";            
+        }
+
+        private void btnLastBill_Click(object sender, EventArgs e)
+        {
+            int sumRecord = BillDAO.Instance.GetNumBillByDate(dtpFromDate.Value, dtpToDate.Value);
+            int lastPage = sumRecord / 10;
+
+            if(sumRecord% 10 != 0)
+            {
+                lastPage++;
+            }
+            txbPageCount.Text = lastPage.ToString();
+        }
+
+        private void txbPageCount_TextChanged(object sender, EventArgs e)
+        {
+            dtgvThongKe.DataSource = BillDAO.Instance.GetListBillByDateAndPage(dtpFromDate.Value, dtpToDate.Value, Convert.ToInt32(txbPageCount.Text));
+        }
+
+        private void btnNext_Click(object sender, EventArgs e)
+        {
+            int pageCount = Convert.ToInt32(txbPageCount.Text);
+            int totalRecords = BillDAO.Instance.GetNumBillByDate(dtpFromDate.Value, dtpToDate.Value);
+            int maxPage = (int)Math.Ceiling((double)totalRecords / 10); // mỗi trang 10 dòng
+
+            if (pageCount < maxPage)
+            {
+                pageCount++;
+                txbPageCount.Text = pageCount.ToString();
+            }
+        }
+
+        private void btnPrevious_Click(object sender, EventArgs e)
+        {
+            int pageCount = Convert.ToInt32(txbPageCount.Text);
+            if (pageCount > 1)
+            {
+                pageCount--;
+                txbPageCount.Text = pageCount.ToString();
+            }
+        }
     }
     #endregion Events
 
