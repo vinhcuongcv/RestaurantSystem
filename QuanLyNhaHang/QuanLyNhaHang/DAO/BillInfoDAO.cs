@@ -24,7 +24,7 @@ namespace QuanLyNhaHang.DAO
         {
             List<BillInfo> listBillInfo = new List<BillInfo>();
             DataTable data = DataProvider.Instance.ExcuteQuery("SELECT*FROM BillInfo WHERE idBill = " + id);
-
+    
             foreach (DataRow item in data.Rows)
             {
                 BillInfo bill = new BillInfo(item);

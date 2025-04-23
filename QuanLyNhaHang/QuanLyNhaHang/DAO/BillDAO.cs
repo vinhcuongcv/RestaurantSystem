@@ -20,9 +20,9 @@ namespace QuanLyNhaHang.DAO
     
         private BillDAO() { }
 
-        public int GetUnCheckedBillIDByTableID(int id)
+        public int GetUnCheckedBillIDByTableID(int idTable)
         {
-            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT*FROM dbo.Bill WHERE id =" +  id +" AND status = 0"); 
+            DataTable data = DataProvider.Instance.ExcuteQuery("SELECT*FROM dbo.Bill WHERE  idTable =" +  idTable +" AND status = 0"); 
             if(data.Rows.Count>0)
             {
                 Bill bill = new Bill(data.Rows[0]);
@@ -30,9 +30,15 @@ namespace QuanLyNhaHang.DAO
             }
             return -1;
         }
-        public void InsertBill(int id)
+        public void InsertBill(int id)  
         {
             DataProvider.Instance.ExcuteNonQuery("Exec USP_InsertBill @idTable", new Object[] { id });
+        }
+
+        public void CheckOut(int id,float discount)
+        {
+            string query = "UPDATE dbo.Bill set status = 1, discount = "+discount +  "where id = "+ id;
+            DataProvider.Instance.ExcuteNonQuery(query);    
         }
 
         public int GetMaxIDBill()

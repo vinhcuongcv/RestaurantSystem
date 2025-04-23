@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace QuanLyNhaHang.DAO
 {
-     public class TableDAO
+     public class TableDAO      
     {
         private static TableDAO instance;
 
@@ -17,11 +17,14 @@ namespace QuanLyNhaHang.DAO
 
         private TableDAO() { }      
         public static TableDAO Instance
-        {
+        {   
             get { if (instance == null) instance = new TableDAO(); return TableDAO.instance; }
             private set { TableDAO.instance = value; }
         }
-        
+        public void SwitchTable(int idTable1, int idTable2)
+        {
+            DataProvider.Instance.ExcuteQuery("EXEC USP_SwitchTable @idTable1 , @idTable2", new object[] { idTable1, idTable2 });
+        }
         public List<Table> loadTableList()
         {
             List<Table> tableList = new List<Table>();

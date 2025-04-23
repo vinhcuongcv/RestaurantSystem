@@ -21,7 +21,7 @@ namespace QuanLyNhaHang.DTO
         public Category(DataRow row)
         {
             this.id = (int)row["id"];
-            this.name = (string)row["name"].ToString();
+            this.name = row["name"].ToString();
         }
 
         public int Id { get => id; set => id = value; }
