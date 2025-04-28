@@ -19,6 +19,10 @@ namespace QuanLyNhaHang
         BindingSource foodList = new BindingSource();
         BindingSource accountList = new BindingSource();
 
+        BindingSource categoryList = new BindingSource();
+        BindingSource tableList = new BindingSource();
+
+
         public Account loginAccount;
         public fAdmin()
         {
@@ -29,6 +33,8 @@ namespace QuanLyNhaHang
         {
             dtgvFood.DataSource = foodList;
             dtgvAccount.DataSource = accountList;
+            dtgvCategory.DataSource = categoryList;
+            dtgvTable.DataSource = tableList;
 
             LoadDateTimePicker();
             LoadListByDate(dtpFromDate.Value, dtpToDate.Value);
@@ -37,6 +43,10 @@ namespace QuanLyNhaHang
             addFoodBinding();
             addAccountBinding();
             LoadCategoryInfoCombobox(cbCategory);
+            LoadListCategory();
+            addCategoryBinding();
+            LoadListTable();
+            addTableBinding();
         }
         private void fAdmin_Load(object sender, EventArgs e)
         {
@@ -75,6 +85,25 @@ namespace QuanLyNhaHang
             txbID.DataBindings.Add(new Binding("Text", dtgvFood.DataSource, "id", true, DataSourceUpdateMode.Never));
             nmTotalPrice.DataBindings.Add(new Binding("Value", dtgvFood.DataSource, "Price", true, DataSourceUpdateMode.Never));
 
+        }
+        void LoadListCategory()
+        {
+            categoryList.DataSource = CategoryDAO.Instance.GetListCategory();
+        }
+        void LoadListTable()
+        {
+            tableList.DataSource = TableDAO.Instance.loadTableList();
+        }
+        void addTableBinding()
+        {
+            txbIdTable.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "id", true, DataSourceUpdateMode.Never));
+            txbNameTable.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "name", true, DataSourceUpdateMode.Never));
+            txbStatusTable.DataBindings.Add(new Binding("Text", dtgvTable.DataSource, "status", true, DataSourceUpdateMode.Never));
+        }
+        void addCategoryBinding()
+        {
+            txbCategoryName.DataBindings.Add(new Binding("Text", dtgvCategory.DataSource, "name", true, DataSourceUpdateMode.Never));
+            txbIDCategory.DataBindings.Add(new Binding("Text", dtgvCategory.DataSource, "id", true, DataSourceUpdateMode.Never));
         }
         void LoadAccount()
         {
@@ -123,12 +152,12 @@ namespace QuanLyNhaHang
             if (loginAccount.Username.Equals(username))
             {
                 MessageBox.Show("Không thể xóa tài khoản đang đăng nhập");
-                return; 
+                return;
             }
             if (AccountDAO.Instance.DeleteAccount(username))
             {
                 MessageBox.Show("Xóa tài khoản thành công");
-                LoadAccount();  
+                LoadAccount();
             }
             else
             {
@@ -332,7 +361,7 @@ namespace QuanLyNhaHang
 
         private void btnFirstBill_Click(object sender, EventArgs e)
         {
-            txbPageCount.Text = "1";            
+            txbPageCount.Text = "1";
         }
 
         private void btnLastBill_Click(object sender, EventArgs e)
@@ -340,7 +369,7 @@ namespace QuanLyNhaHang
             int sumRecord = BillDAO.Instance.GetNumBillByDate(dtpFromDate.Value, dtpToDate.Value);
             int lastPage = sumRecord / 10;
 
-            if(sumRecord% 10 != 0)
+            if (sumRecord % 10 != 0)
             {
                 lastPage++;
             }
@@ -372,6 +401,114 @@ namespace QuanLyNhaHang
             {
                 pageCount--;
                 txbPageCount.Text = pageCount.ToString();
+            }
+        }
+
+        private void btnShowDanhMuc_Click(object sender, EventArgs e)
+        {
+            LoadListCategory();
+        }
+
+        private void btnAddCategory_Click(object sender, EventArgs e)
+        {
+            string name = txbCategoryName.Text;
+
+            if (CategoryDAO.Instance.InsertCategory(name))
+            {
+                MessageBox.Show("Thêm danh mục thành công");
+                LoadListCategory();
+                LoadCategoryInfoCombobox(cbCategory);
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi thêm danh mục");
+            }
+        }
+
+        private void btnChangeCategory_Click(object sender, EventArgs e)
+        {
+            string id = txbIDCategory.Text;
+            string name = txbCategoryName.Text.Trim();
+            if (CategoryDAO.Instance.UpdateCategory(name, id))
+            {
+                MessageBox.Show("Cập nhật danh mục thành công");
+                LoadListCategory();
+                LoadCategoryInfoCombobox(cbCategory);
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi cập nhật danh mục");
+            }
+        }
+
+        private void btnDeleteCategory_Click(object sender, EventArgs e)
+        {
+            string id = txbIDCategory.Text;
+            if (CategoryDAO.Instance.DeleteCategory(id))
+            {
+                MessageBox.Show("Xóa danh mục thành công");
+                LoadListCategory();
+                LoadCategoryInfoCombobox(cbCategory);
+            }
+            else
+            {
+                MessageBox.Show("Xóa danh mục thất bại");
+            }
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnShowTable_Click(object sender, EventArgs e)
+        {
+            LoadListTable();
+        }
+        public event EventHandler InsertTable;
+
+        private void btnAddTable_Click(object sender, EventArgs e)
+        {
+            string name = txbNameTable.Text.Trim();
+
+            if (string.IsNullOrEmpty(name))
+            {
+                MessageBox.Show("Tên bàn không được để trống!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (TableDAO.Instance.CheckTableNameExists(name))
+            {
+                MessageBox.Show("Tên bàn đã tồn tại, vui lòng nhập tên khác!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (TableDAO.Instance.InsertTable(name))
+            {
+                MessageBox.Show("Thêm bàn mới thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadListTable(); // reload lại giao diện các bàn
+                InsertTable?.Invoke(this, EventArgs.Empty);  // Kích hoạt sự kiện khi bàn được thêm
+            }
+            else
+            {
+                MessageBox.Show("Có lỗi khi thêm bàn!", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+        public event EventHandler DeleteTable;
+
+        private void btnDeleteTable_Click(object sender, EventArgs e)
+        {
+            string id = txbIdTable.Text.Trim();
+            if (CategoryDAO.Instance.DeleteCategory(id))
+            {
+                MessageBox.Show("Xóa bàn thành công");
+                LoadListTable();
+                DeleteTable?.Invoke(this, EventArgs.Empty);  // Kích hoạt sự kiện thông báo đã xóa bàn
+
+            }
+            else
+            {
+                MessageBox.Show("Xóa b thất bại");
             }
         }
     }

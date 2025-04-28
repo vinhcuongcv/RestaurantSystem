@@ -34,6 +34,7 @@ namespace QuanLyNhaHang
             loadTable();
             LoadCategory();
             loadComboboxTable(cbSwitchTable);
+
         }
         #region Method
         void ChangeAccount(int type)
@@ -134,7 +135,10 @@ namespace QuanLyNhaHang
         private void adminToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fAdmin f = new fAdmin();
-            f.loginAccount = LoginAccount;
+            f.InsertTable += f_InsertTable;
+            f.DeleteTable += f_TableDeleted;  // Đăng ký sự kiện xóa bàn
+
+            f.loginAccount = LoginAccount;  
             f.InsertFood += f_InsertFood;
             f.DeleteFood += f_DeleteFood;
             f.UpdateFood += f_UpdateFood;
@@ -278,6 +282,16 @@ namespace QuanLyNhaHang
         private void thêmMónToolStripMenuItem_Click(object sender, EventArgs e)
         {
             btnAddFood_Click(this, new EventArgs()); // Gọi thằng event click nút thêm món
+        }
+
+        private void f_InsertTable(object sender, EventArgs e)
+        {
+            // Cập nhật danh sách bàn sau khi thêm bàn mới
+            loadTable();
+        }
+        private void f_TableDeleted(object sender, EventArgs e)
+        {
+            loadTable();  // Cập nhật danh sách bàn ăn trong fTableManager
         }
     }
 }   

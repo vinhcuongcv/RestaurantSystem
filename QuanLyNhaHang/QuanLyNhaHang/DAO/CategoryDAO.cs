@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +48,27 @@ namespace QuanLyNhaHang.DAO
                 return category;
             }   
             return category;
+        }
+
+        public bool InsertCategory(string name)
+        {
+            string query = string.Format("INSERT dbo.FoodCategory ( name ) Values ( N'{0}' )", name);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool UpdateCategory(string name, string id)
+        {
+            string query = string.Format("UPDATE dbo.FoodCategory SET name = N'{0}' WHERE id = {1}", name, id);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+
+        public bool DeleteCategory(string id)
+        {
+            string query = "DELETE FROM dbo.FoodCategory WHERE id = " + id;
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
         }
     }
 }

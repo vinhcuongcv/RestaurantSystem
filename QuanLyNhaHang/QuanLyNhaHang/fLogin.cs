@@ -39,7 +39,10 @@ namespace QuanLyNhaHang
             else
             {
                 MessageBox.Show("Bạn nhập sai tài khoản hoặc mật khẩu", "Thông Báo");
-            }    
+            }
+            txtUserName.Clear();
+            txtPassWord.Clear();
+            txtUserName.Focus();
         }
         bool Login(string username , string password)
         {
