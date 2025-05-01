@@ -22,7 +22,6 @@ namespace QuanLyNhaHang
         BindingSource categoryList = new BindingSource();
         BindingSource tableList = new BindingSource();
 
-
         public Account loginAccount;
         public fAdmin()
         {
@@ -509,6 +508,18 @@ namespace QuanLyNhaHang
             else
             {
                 MessageBox.Show("Xóa b thất bại");
+            }
+        }
+
+        private void dtgvThongKe_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure the clicked cell is within a valid row  
+            {
+                DataGridViewRow row = dtgvThongKe.Rows[e.RowIndex]; 
+                int id = Convert.ToInt32(row.Cells["Mã hóa đơn"].Value);
+                string tableName = row.Cells["Tên bàn"].Value.ToString();
+                fBillInfor billDetailForm = new fBillInfor(id, tableName);
+                billDetailForm.ShowDialog();
             }
         }
     }

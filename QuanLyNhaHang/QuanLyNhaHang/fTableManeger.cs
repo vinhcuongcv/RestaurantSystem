@@ -85,8 +85,8 @@ namespace QuanLyNhaHang
         {
             lvBill.Items.Clear();
             double totalPrice = 0;
-            List<MenuDTO> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
-            foreach (MenuDTO item in listBillInfo)
+            List<DTO.MenuDTO> listBillInfo = MenuDAO.Instance.GetListMenuByTable(id);
+            foreach (DTO.MenuDTO item in listBillInfo)
             {
                 ListViewItem list = new ListViewItem(item.FoodName.ToString());
                 list.SubItems.Add(item.Count.ToString());
@@ -167,6 +167,7 @@ namespace QuanLyNhaHang
             if (lvBill.Tag != null)
                 ShowBill((lvBill.Tag as Table).ID);
             loadTable();
+            nmFoodCount.Value = 0;
         }
 
         private void thôngTinTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
@@ -203,58 +204,75 @@ namespace QuanLyNhaHang
 
         private void btnAddFood_Click(object sender, EventArgs e)
         {
-            Table table = lvBill.Tag as Table;
-            if (table == null)
-                MessageBox.Show("Hãy chọn bàn");
-            int idBill = BillDAO.Instance.GetUnCheckedBillIDByTableID(table.ID);
-            int idFood = (cbFood.SelectedItem as Food).Id;
-            int count = (int)nmFoodCount.Value;
-
-            if(idBill == -1)
+            if(nmFoodCount.Value != 0)
             {
-                BillDAO.Instance.InsertBill(table.ID);
-                BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), idFood, count);
+                Table table = lvBill.Tag as Table;
+                if (table == null)
+                {
+                    MessageBox.Show("Hãy chọn bàn");
+                    return;
+                }
+                int idBill = BillDAO.Instance.GetUnCheckedBillIDByTableID(table.ID);
+                int idFood = (cbFood.SelectedItem as Food).Id;
+                int count = (int)nmFoodCount.Value;
+
+                if (idBill == -1)
+                {
+                    BillDAO.Instance.InsertBill(table.ID);
+                    BillInfoDAO.Instance.InsertBillInfo(BillDAO.Instance.GetMaxIDBill(), idFood, count);
+                }
+                else
+                {
+                    BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
+                }
+                ShowBill(table.ID);
+
+                loadTable();
+                nmFoodCount.Value = 0;
             }
             else
             {
-                BillInfoDAO.Instance.InsertBillInfo(idBill, idFood, count);
-            }
-            ShowBill(table.ID);
-
-            loadTable();
+                MessageBox.Show("Vui lòng chọn số lượng thức ăn muốn thêm !", "Thông báo");
+            }    
 
         }
         //buntton Thanh toán
         private void button4_Click(object sender, EventArgs e)
         {
-            Table table = lvBill.Tag as Table;
-            int idBill = BillDAO.Instance.GetUnCheckedBillIDByTableID(table.ID);
-            float discount = (float)nmDiscount.Value;
-
-            // Xử lý chuỗi số tiền
-            string raw = new string(txbTotalPrice.Text.Where(char.IsDigit).ToArray());
-            raw = raw.Replace(".", "");  // Xóa dấu phân cách hàng nghìn (nếu có)
-
-            // Chuyển đổi chuỗi thành số tiền
-            float totalPrice = float.Parse(raw);
-            float finalTotalPrice = totalPrice - (totalPrice / 100 * discount);
-
-            // Kiểm tra hóa đơn chưa thanh toán
-            if (idBill != -1)
+            if(lvBill.Items.Count != 0)
             {
-                // Hiển thị thông báo thanh toán
-                if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền/100) x Giảm giá = {1} - ({1}/100 x {2}) = {3}",
-                                                    table.Name, totalPrice, discount, finalTotalPrice),
-                                    "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                Table table = lvBill.Tag as Table;
+                int idBill = BillDAO.Instance.GetUnCheckedBillIDByTableID(table.ID);
+                float discount = (float)nmDiscount.Value;
+
+                // Xử lý chuỗi số tiền
+                string raw = new string(txbTotalPrice.Text.Where(char.IsDigit).ToArray());
+                raw = raw.Replace(".", "");  // Xóa dấu phân cách hàng nghìn (nếu có)
+
+                // Chuyển đổi chuỗi thành số tiền
+                float totalPrice = float.Parse(raw);
+                float finalTotalPrice = totalPrice - (totalPrice / 100 * discount);
+
+                // Kiểm tra hóa đơn chưa thanh toán
+                if (idBill != -1)
                 {
-                    // Cập nhật thông tin thanh toán
-                    BillDAO.Instance.CheckOut(idBill, discount, finalTotalPrice);
-                    ShowBill(table.ID);
-                    loadTable();
+                    // Hiển thị thông báo thanh toán
+                    if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền/100) x Giảm giá = {1} - ({1}/100 x {2}) = {3}",
+                                                        table.Name, totalPrice, discount, finalTotalPrice),
+                                        "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                    {
+                        // Cập nhật thông tin thanh toán
+                        BillDAO.Instance.CheckOut(idBill, discount, finalTotalPrice);
+                        ShowBill(table.ID);
+                        loadTable();
+                    }
                 }
+                nmDiscount.Value = 0;
             }
-
-
+            else
+            {
+                MessageBox.Show("Vui lòng chọn bàn và món ăn để thanh toán !", "Thông báo");
+            }    
         }
 
         private void btnSwitchTable_Click(object sender, EventArgs e)
@@ -292,6 +310,12 @@ namespace QuanLyNhaHang
         private void f_TableDeleted(object sender, EventArgs e)
         {
             loadTable();  // Cập nhật danh sách bàn ăn trong fTableManager
+        }
+
+        private void btnBanking_Click(object sender, EventArgs e)
+        {
+            fVnPayQrCode f = new fVnPayQrCode();
+            f.ShowDialog();
         }
     }
 }   

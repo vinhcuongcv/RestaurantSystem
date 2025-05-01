@@ -33,6 +33,9 @@
             this.thôngTinTàiKhoảnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.thôngTinCáNhânToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.đăngXuấtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.thêmMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.lvBill = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -40,6 +43,7 @@
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnBanking = new System.Windows.Forms.Button();
             this.txbTotalPrice = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button4 = new System.Windows.Forms.Button();
@@ -53,9 +57,6 @@
             this.btnAddFood = new System.Windows.Forms.Button();
             this.cbFood = new System.Windows.Forms.ComboBox();
             this.flpTable = new System.Windows.Forms.FlowLayoutPanel();
-            this.chứcNăngToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thanhToánToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.thêmMónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -110,6 +111,31 @@
             this.đăngXuấtToolStripMenuItem.Text = "Đăng xuất";
             this.đăngXuấtToolStripMenuItem.Click += new System.EventHandler(this.đăngXuấtToolStripMenuItem_Click);
             // 
+            // chứcNăngToolStripMenuItem
+            // 
+            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.thanhToánToolStripMenuItem,
+            this.thêmMónToolStripMenuItem});
+            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
+            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(107, 27);
+            this.chứcNăngToolStripMenuItem.Text = "Chức năng";
+            // 
+            // thanhToánToolStripMenuItem
+            // 
+            this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
+            this.thanhToánToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
+            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
+            this.thanhToánToolStripMenuItem.Text = "Thanh toán";
+            this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click);
+            // 
+            // thêmMónToolStripMenuItem
+            // 
+            this.thêmMónToolStripMenuItem.Name = "thêmMónToolStripMenuItem";
+            this.thêmMónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
+            this.thêmMónToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
+            this.thêmMónToolStripMenuItem.Text = "Thêm món";
+            this.thêmMónToolStripMenuItem.Click += new System.EventHandler(this.thêmMónToolStripMenuItem_Click);
+            // 
             // panel2
             // 
             this.panel2.Controls.Add(this.lvBill);
@@ -158,6 +184,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.btnBanking);
             this.panel3.Controls.Add(this.txbTotalPrice);
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.button4);
@@ -169,6 +196,16 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(557, 89);
             this.panel3.TabIndex = 3;
+            // 
+            // btnBanking
+            // 
+            this.btnBanking.Location = new System.Drawing.Point(174, 3);
+            this.btnBanking.Name = "btnBanking";
+            this.btnBanking.Size = new System.Drawing.Size(86, 77);
+            this.btnBanking.TabIndex = 8;
+            this.btnBanking.Text = "VNPAY QRCODE\r\n";
+            this.btnBanking.UseVisualStyleBackColor = true;
+            this.btnBanking.Click += new System.EventHandler(this.btnBanking_Click);
             // 
             // txbTotalPrice
             // 
@@ -196,9 +233,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(236, 3);
+            this.button4.Location = new System.Drawing.Point(266, 3);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(116, 77);
+            this.button4.Size = new System.Drawing.Size(86, 77);
             this.button4.TabIndex = 5;
             this.button4.Text = "Thanh toán";
             this.button4.UseVisualStyleBackColor = true;
@@ -207,17 +244,17 @@
             // nmDiscount
             // 
             this.nmDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmDiscount.Location = new System.Drawing.Point(125, 51);
+            this.nmDiscount.Location = new System.Drawing.Point(94, 50);
             this.nmDiscount.Name = "nmDiscount";
-            this.nmDiscount.Size = new System.Drawing.Size(105, 27);
+            this.nmDiscount.Size = new System.Drawing.Size(74, 27);
             this.nmDiscount.TabIndex = 4;
             this.nmDiscount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(122, 3);
+            this.button3.Location = new System.Drawing.Point(94, 1);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(108, 44);
+            this.button3.Size = new System.Drawing.Size(74, 44);
             this.button3.TabIndex = 3;
             this.button3.Text = "Giảm giá";
             this.button3.UseVisualStyleBackColor = true;
@@ -226,7 +263,7 @@
             // 
             this.btnSwitchTable.Location = new System.Drawing.Point(0, 3);
             this.btnSwitchTable.Name = "btnSwitchTable";
-            this.btnSwitchTable.Size = new System.Drawing.Size(118, 44);
+            this.btnSwitchTable.Size = new System.Drawing.Size(88, 44);
             this.btnSwitchTable.TabIndex = 2;
             this.btnSwitchTable.Text = "Chuyển bàn";
             this.btnSwitchTable.UseVisualStyleBackColor = true;
@@ -238,7 +275,7 @@
             this.cbSwitchTable.FormattingEnabled = true;
             this.cbSwitchTable.Location = new System.Drawing.Point(1, 51);
             this.cbSwitchTable.Name = "cbSwitchTable";
-            this.cbSwitchTable.Size = new System.Drawing.Size(118, 26);
+            this.cbSwitchTable.Size = new System.Drawing.Size(87, 26);
             this.cbSwitchTable.TabIndex = 1;
             // 
             // panel4
@@ -265,14 +302,14 @@
             // nmFoodCount
             // 
             this.nmFoodCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.nmFoodCount.Location = new System.Drawing.Point(462, 48);
+            this.nmFoodCount.Location = new System.Drawing.Point(467, 48);
             this.nmFoodCount.Minimum = new decimal(new int[] {
             100,
             0,
             0,
             -2147483648});
             this.nmFoodCount.Name = "nmFoodCount";
-            this.nmFoodCount.Size = new System.Drawing.Size(43, 27);
+            this.nmFoodCount.Size = new System.Drawing.Size(61, 27);
             this.nmFoodCount.TabIndex = 3;
             this.nmFoodCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -304,31 +341,6 @@
             this.flpTable.Size = new System.Drawing.Size(573, 684);
             this.flpTable.TabIndex = 4;
             // 
-            // chứcNăngToolStripMenuItem
-            // 
-            this.chứcNăngToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.thanhToánToolStripMenuItem,
-            this.thêmMónToolStripMenuItem});
-            this.chứcNăngToolStripMenuItem.Name = "chứcNăngToolStripMenuItem";
-            this.chứcNăngToolStripMenuItem.Size = new System.Drawing.Size(107, 27);
-            this.chứcNăngToolStripMenuItem.Text = "Chức năng";
-            // 
-            // thanhToánToolStripMenuItem
-            // 
-            this.thanhToánToolStripMenuItem.Name = "thanhToánToolStripMenuItem";
-            this.thanhToánToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.thanhToánToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
-            this.thanhToánToolStripMenuItem.Text = "Thanh toán";
-            this.thanhToánToolStripMenuItem.Click += new System.EventHandler(this.thanhToánToolStripMenuItem_Click);
-            // 
-            // thêmMónToolStripMenuItem
-            // 
-            this.thêmMónToolStripMenuItem.Name = "thêmMónToolStripMenuItem";
-            this.thêmMónToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.B)));
-            this.thêmMónToolStripMenuItem.Size = new System.Drawing.Size(242, 28);
-            this.thêmMónToolStripMenuItem.Text = "Thêm món";
-            this.thêmMónToolStripMenuItem.Click += new System.EventHandler(this.thêmMónToolStripMenuItem_Click);
-            // 
             // fTableManeger
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -341,6 +353,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "fTableManeger";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fTableManeger";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -385,5 +398,6 @@
         private System.Windows.Forms.ToolStripMenuItem chứcNăngToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thanhToánToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem thêmMónToolStripMenuItem;
+        private System.Windows.Forms.Button btnBanking;
     }
 }

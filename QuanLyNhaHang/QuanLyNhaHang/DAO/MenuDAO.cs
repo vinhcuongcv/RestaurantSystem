@@ -23,13 +23,13 @@ namespace QuanLyNhaHang.DAO
         {
 
         }
-        public List<MenuDTO> GetListMenuByTable(int id)
+        public List<DTO.MenuDTO> GetListMenuByTable(int id)
         {
-            List<MenuDTO> listMenu = new List<MenuDTO>();
+            List<DTO.MenuDTO> listMenu = new List<DTO.MenuDTO>();
             DataTable data = DataProvider.Instance.ExcuteQuery("SELECT Food.name , BillInfo.count , Food.price,Food.price*BillInfo.count AS TotalPrice FROM dbo.Food , dbo.Bill , dbo.BillInfo\r\nWHERE dbo.BillInfo.idBill = dbo.Bill.id AND\r\n\t  dbo.BillInfo.idFood = dbo.Food.id AND dbo.Bill.status = 0 AND Bill.idTable ="+ id);
             foreach (DataRow item in data.Rows)
             {
-                MenuDTO menu = new MenuDTO(item);
+                DTO.MenuDTO menu = new DTO.MenuDTO(item);
                 listMenu.Add(menu);
             }
 
