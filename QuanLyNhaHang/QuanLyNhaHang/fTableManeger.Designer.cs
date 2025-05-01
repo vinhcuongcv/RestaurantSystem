@@ -139,13 +139,17 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.lvBill);
-            this.panel2.Location = new System.Drawing.Point(579, 143);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 31);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(556, 477);
+            this.panel2.Size = new System.Drawing.Size(1142, 685);
             this.panel2.TabIndex = 2;
             // 
             // lvBill
             // 
+            this.lvBill.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lvBill.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2,
@@ -154,7 +158,7 @@
             this.lvBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.lvBill.GridLines = true;
             this.lvBill.HideSelection = false;
-            this.lvBill.Location = new System.Drawing.Point(0, 0);
+            this.lvBill.Location = new System.Drawing.Point(579, 115);
             this.lvBill.Name = "lvBill";
             this.lvBill.Size = new System.Drawing.Size(556, 477);
             this.lvBill.TabIndex = 0;
@@ -184,6 +188,8 @@
             // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.Controls.Add(this.btnBanking);
             this.panel3.Controls.Add(this.txbTotalPrice);
             this.panel3.Controls.Add(this.label1);
@@ -199,6 +205,7 @@
             // 
             // btnBanking
             // 
+            this.btnBanking.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnBanking.Location = new System.Drawing.Point(174, 3);
             this.btnBanking.Name = "btnBanking";
             this.btnBanking.Size = new System.Drawing.Size(86, 77);
@@ -209,6 +216,7 @@
             // 
             // txbTotalPrice
             // 
+            this.txbTotalPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txbTotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.txbTotalPrice.ForeColor = System.Drawing.Color.Red;
             this.txbTotalPrice.Location = new System.Drawing.Point(358, 39);
@@ -221,6 +229,7 @@
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label1.BackColor = System.Drawing.Color.Red;
             this.label1.Font = new System.Drawing.Font("Arial", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.label1.ForeColor = System.Drawing.Color.Transparent;
@@ -233,6 +242,7 @@
             // 
             // button4
             // 
+            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button4.Location = new System.Drawing.Point(266, 3);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(86, 77);
@@ -243,6 +253,7 @@
             // 
             // nmDiscount
             // 
+            this.nmDiscount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.nmDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.nmDiscount.Location = new System.Drawing.Point(94, 50);
             this.nmDiscount.Name = "nmDiscount";
@@ -252,6 +263,7 @@
             // 
             // button3
             // 
+            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button3.Location = new System.Drawing.Point(94, 1);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 44);
@@ -261,6 +273,7 @@
             // 
             // btnSwitchTable
             // 
+            this.btnSwitchTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnSwitchTable.Location = new System.Drawing.Point(0, 3);
             this.btnSwitchTable.Name = "btnSwitchTable";
             this.btnSwitchTable.Size = new System.Drawing.Size(88, 44);
@@ -271,6 +284,7 @@
             // 
             // cbSwitchTable
             // 
+            this.cbSwitchTable.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cbSwitchTable.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbSwitchTable.FormattingEnabled = true;
             this.cbSwitchTable.Location = new System.Drawing.Point(1, 51);
@@ -280,6 +294,8 @@
             // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.cbCategory);
             this.panel4.Controls.Add(this.nmFoodCount);
             this.panel4.Controls.Add(this.btnAddFood);
@@ -288,9 +304,11 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(556, 109);
             this.panel4.TabIndex = 4;
+            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // cbCategory
             // 
+            this.cbCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbCategory.FormattingEnabled = true;
             this.cbCategory.Location = new System.Drawing.Point(3, 26);
@@ -301,6 +319,7 @@
             // 
             // nmFoodCount
             // 
+            this.nmFoodCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.nmFoodCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.nmFoodCount.Location = new System.Drawing.Point(467, 48);
             this.nmFoodCount.Minimum = new decimal(new int[] {
@@ -315,6 +334,7 @@
             // 
             // btnAddFood
             // 
+            this.btnAddFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnAddFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnAddFood.Location = new System.Drawing.Point(309, 26);
             this.btnAddFood.Name = "btnAddFood";
@@ -326,6 +346,7 @@
             // 
             // cbFood
             // 
+            this.cbFood.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbFood.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.cbFood.FormattingEnabled = true;
             this.cbFood.Location = new System.Drawing.Point(3, 66);
@@ -335,6 +356,8 @@
             // 
             // flpTable
             // 
+            this.flpTable.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.flpTable.AutoScroll = true;
             this.flpTable.Location = new System.Drawing.Point(0, 31);
             this.flpTable.Name = "flpTable";

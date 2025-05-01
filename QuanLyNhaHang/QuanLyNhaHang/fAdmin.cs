@@ -522,6 +522,16 @@ namespace QuanLyNhaHang
                 billDetailForm.ShowDialog();
             }
         }
+
+        private void dtgvAccount_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dtgvTable_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
     #endregion Events
 

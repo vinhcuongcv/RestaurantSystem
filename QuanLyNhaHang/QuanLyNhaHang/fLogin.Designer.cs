@@ -49,9 +49,11 @@ namespace QuanLyNhaHang
             this.txtPassWord = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +107,7 @@ namespace QuanLyNhaHang
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 514);
+            this.panel1.Size = new System.Drawing.Size(375, 552);
             this.panel1.TabIndex = 0;
             // 
             // label5
@@ -133,7 +135,7 @@ namespace QuanLyNhaHang
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label6.Location = new System.Drawing.Point(395, 94);
+            this.label6.Location = new System.Drawing.Point(14, 94);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(101, 32);
             this.label6.TabIndex = 1;
@@ -141,9 +143,10 @@ namespace QuanLyNhaHang
             // 
             // label7
             // 
+            this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label7.Location = new System.Drawing.Point(396, 186);
+            this.label7.Location = new System.Drawing.Point(15, 186);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(118, 25);
             this.label7.TabIndex = 2;
@@ -151,9 +154,10 @@ namespace QuanLyNhaHang
             // 
             // label8
             // 
+            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label8.Location = new System.Drawing.Point(396, 260);
+            this.label8.Location = new System.Drawing.Point(15, 260);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 25);
             this.label8.TabIndex = 3;
@@ -161,8 +165,9 @@ namespace QuanLyNhaHang
             // 
             // txtUserName
             // 
+            this.txtUserName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtUserName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtUserName.Location = new System.Drawing.Point(529, 177);
+            this.txtUserName.Location = new System.Drawing.Point(148, 177);
             this.txtUserName.Multiline = true;
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(204, 34);
@@ -170,8 +175,9 @@ namespace QuanLyNhaHang
             // 
             // txtPassWord
             // 
+            this.txtPassWord.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtPassWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txtPassWord.Location = new System.Drawing.Point(529, 251);
+            this.txtPassWord.Location = new System.Drawing.Point(148, 251);
             this.txtPassWord.Multiline = true;
             this.txtPassWord.Name = "txtPassWord";
             this.txtPassWord.PasswordChar = '*';
@@ -180,12 +186,13 @@ namespace QuanLyNhaHang
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(121)))), ((int)(((byte)(84)))));
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(401, 350);
+            this.button1.Location = new System.Drawing.Point(20, 350);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(130, 54);
+            this.button1.Size = new System.Drawing.Size(136, 54);
             this.button1.TabIndex = 6;
             this.button1.Text = "Login";
             this.button1.UseVisualStyleBackColor = false;
@@ -193,27 +200,39 @@ namespace QuanLyNhaHang
             // 
             // button2
             // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.button2.BackColor = System.Drawing.Color.Red;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(603, 350);
+            this.button2.Location = new System.Drawing.Point(216, 350);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 54);
+            this.button2.Size = new System.Drawing.Size(136, 54);
             this.button2.TabIndex = 7;
             this.button2.Text = "Exit";
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Controls.Add(this.label7);
+            this.panel2.Controls.Add(this.txtUserName);
+            this.panel2.Controls.Add(this.txtPassWord);
+            this.panel2.Controls.Add(this.button1);
+            this.panel2.Location = new System.Drawing.Point(381, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(373, 552);
+            this.panel2.TabIndex = 1;
+            // 
             // fLogin
             // 
-            this.ClientSize = new System.Drawing.Size(753, 514);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.txtPassWord);
-            this.Controls.Add(this.txtUserName);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
-            this.Controls.Add(this.label6);
+            this.ClientSize = new System.Drawing.Size(754, 552);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -224,8 +243,9 @@ namespace QuanLyNhaHang
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -246,5 +266,6 @@ namespace QuanLyNhaHang
         private TextBox txtPassWord;
         private Button button1;
         private Button button2;
+        private Panel panel2;
     }
 }

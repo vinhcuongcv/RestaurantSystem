@@ -43,6 +43,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.pbQR = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.nmMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbQR)).BeginInit();
             this.SuspendLayout();
@@ -215,11 +216,25 @@
             this.label7.Text = "QR CODE VNPAY";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.Red;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.btnClose.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnClose.Location = new System.Drawing.Point(21, 330);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(205, 67);
+            this.btnClose.TabIndex = 15;
+            this.btnClose.Text = "CLOSE";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // fVnPayQrCode
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 681);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pbQR);
             this.Controls.Add(this.btnCreate);
@@ -235,6 +250,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbNganHang);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "fVnPayQrCode";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fVnPayQrCode";
@@ -262,5 +278,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.PictureBox pbQR;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button btnClose;
     }
 }

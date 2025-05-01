@@ -17,9 +17,20 @@ namespace QuanLyNhaHang
 {
     public partial class fVnPayQrCode : Form
     {
-        public fVnPayQrCode()
+        public fVnPayQrCode(float tongTien)
         {
             InitializeComponent();
+            if (tongTien != null)
+            {
+                nmMoney.Value = (decimal)tongTien;
+            }
+            else
+            {
+                MessageBox.Show("Bạn cần có hóa đơn thanh toán");
+                this.Close();
+            }
+            txbTenTaiKhoan.Text = "TRINH VINH CUONG";
+            txbSoTaiKhoan.Text = "0846576076";
             using (WebClient client = new WebClient())
             {
                 var htmlData = client.DownloadData("https://api.vietqr.io/v2/banks");
@@ -69,6 +80,11 @@ namespace QuanLyNhaHang
 
             var image = Base64ToImage(dataResult.data.qrDataURL.Replace("data:image/png;base64,", ""));
             pbQR.Image = image;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

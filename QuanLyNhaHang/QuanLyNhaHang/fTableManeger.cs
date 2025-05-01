@@ -314,8 +314,14 @@ namespace QuanLyNhaHang
 
         private void btnBanking_Click(object sender, EventArgs e)
         {
-            fVnPayQrCode f = new fVnPayQrCode();
+            float tongTien = float.Parse(new string(txbTotalPrice.Text.Where(char.IsDigit).ToArray()));
+            fVnPayQrCode f = new fVnPayQrCode(tongTien);
             f.ShowDialog();
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }   
