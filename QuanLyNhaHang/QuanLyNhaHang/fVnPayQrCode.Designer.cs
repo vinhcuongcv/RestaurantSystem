@@ -186,7 +186,7 @@
             this.btnCreate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(7)))), ((int)(((byte)(99)))), ((int)(((byte)(102)))));
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
             this.btnCreate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.btnCreate.Location = new System.Drawing.Point(30, 338);
+            this.btnCreate.Location = new System.Drawing.Point(21, 415);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(205, 67);
             this.btnCreate.TabIndex = 12;
@@ -196,9 +196,9 @@
             // 
             // pbQR
             // 
-            this.pbQR.Location = new System.Drawing.Point(292, 246);
+            this.pbQR.Location = new System.Drawing.Point(473, 243);
             this.pbQR.Name = "pbQR";
-            this.pbQR.Size = new System.Drawing.Size(361, 340);
+            this.pbQR.Size = new System.Drawing.Size(427, 417);
             this.pbQR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbQR.TabIndex = 13;
             this.pbQR.TabStop = false;
@@ -219,7 +219,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 598);
+            this.ClientSize = new System.Drawing.Size(924, 681);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pbQR);
             this.Controls.Add(this.btnCreate);
