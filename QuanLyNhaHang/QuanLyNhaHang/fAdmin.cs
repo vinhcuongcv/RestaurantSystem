@@ -366,9 +366,9 @@ namespace QuanLyNhaHang
         private void btnLastBill_Click(object sender, EventArgs e)
         {
             int sumRecord = BillDAO.Instance.GetNumBillByDate(dtpFromDate.Value, dtpToDate.Value);
-            int lastPage = sumRecord / 10;
+            int lastPage = sumRecord / 13;
 
-            if (sumRecord % 10 != 0)
+            if (sumRecord % 13 != 0)
             {
                 lastPage++;
             }
@@ -384,7 +384,7 @@ namespace QuanLyNhaHang
         {
             int pageCount = Convert.ToInt32(txbPageCount.Text);
             int totalRecords = BillDAO.Instance.GetNumBillByDate(dtpFromDate.Value, dtpToDate.Value);
-            int maxPage = (int)Math.Ceiling((double)totalRecords / 10); // mỗi trang 10 dòng
+            int maxPage = (int)Math.Ceiling((double)totalRecords / 13); // mỗi trang 10 dòng
 
             if (pageCount < maxPage)
             {

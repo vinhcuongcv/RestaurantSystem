@@ -257,7 +257,7 @@ namespace QuanLyNhaHang
                 if (idBill != -1)
                 {
                     // Hiển thị thông báo thanh toán
-                    if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho bàn {0}\nTổng tiền - (Tổng tiền/100) x Giảm giá = {1} - ({1}/100 x {2}) = {3}",
+                    if (MessageBox.Show(string.Format("Bạn có chắc thanh toán hóa đơn cho {0}\nTổng tiền - (Tổng tiền/100) x Giảm giá = {1} - ({1}/100 x {2}) = {3}",
                                                         table.Name, totalPrice, discount, finalTotalPrice),
                                         "Thông báo", MessageBoxButtons.OKCancel) == DialogResult.OK)
                     {
@@ -315,8 +315,15 @@ namespace QuanLyNhaHang
         private void btnBanking_Click(object sender, EventArgs e)
         {
             float tongTien = float.Parse(new string(txbTotalPrice.Text.Where(char.IsDigit).ToArray()));
-            fVnPayQrCode f = new fVnPayQrCode(tongTien);
-            f.ShowDialog();
+            if (tongTien != null && tongTien != 0)
+            {
+                fVnPayQrCode f = new fVnPayQrCode(tongTien);
+                f.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Bạn cần có hóa đơn thanh toán");
+            }
         }
 
         private void panel4_Paint(object sender, PaintEventArgs e)

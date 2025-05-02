@@ -20,7 +20,7 @@ namespace QuanLyNhaHang
         {
             InitializeComponent();
             this.id = id;
-            lblTableBill.Text = "Hóa Đơn "+tableName;
+            lblTableBill.Text = "Hóa Đơn "+tableName+ " (Mã hóa đơn : " + id + " )";
             LoadBillInfo();
         }
         void LoadBillInfo()

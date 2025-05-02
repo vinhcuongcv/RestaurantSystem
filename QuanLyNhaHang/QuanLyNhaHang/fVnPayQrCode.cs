@@ -20,17 +20,9 @@ namespace QuanLyNhaHang
         public fVnPayQrCode(float tongTien)
         {
             InitializeComponent();
-            if (tongTien != null)
-            {
-                nmMoney.Value = (decimal)tongTien;
-            }
-            else
-            {
-                MessageBox.Show("Bạn cần có hóa đơn thanh toán");
-                this.Close();
-            }
             txbTenTaiKhoan.Text = "TRINH VINH CUONG";
             txbSoTaiKhoan.Text = "0846576076";
+            nmMoney.Value = (decimal)tongTien;
             using (WebClient client = new WebClient())
             {
                 var htmlData = client.DownloadData("https://api.vietqr.io/v2/banks");

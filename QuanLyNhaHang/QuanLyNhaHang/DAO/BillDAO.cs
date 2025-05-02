@@ -43,7 +43,7 @@ namespace QuanLyNhaHang.DAO
 
         public DataTable GetListBillByDate(DateTime checkIn,DateTime checkOut)
         {
-            return DataProvider.Instance.ExcuteQuery("EXEC USP_GetListBillByDate @dateCheckIn , @dateCheckOut", new object[] { checkIn, checkOut });
+            return DataProvider.Instance.ExcuteQuery("EXEC USP_GetListBillByDateAndPage @dateCheckIn , @dateCheckOut , @page", new object[] { checkIn, checkOut , 1 });
         }
 
         public DataTable GetListBillByDateAndPage(DateTime checkIn, DateTime checkOut, int pageNum)
