@@ -18,6 +18,7 @@ namespace QuanLyNhaHang
         public fLogin()
         {
             InitializeComponent();
+            txtUserName.Focus();
         }
         private void fLogin_Load(object sender, EventArgs e)
         {

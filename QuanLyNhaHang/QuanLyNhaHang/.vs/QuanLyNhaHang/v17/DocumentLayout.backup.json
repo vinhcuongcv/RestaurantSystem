@@ -3,15 +3,59 @@
   "WorkspaceRootPath": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\apirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\apirequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\bank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\billinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\billinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\food.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\menudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\menudto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dto\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dto\\table.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fvnpayqrcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fvnpayqrcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fvnpayqrcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fvnpayqrcode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -19,24 +63,40 @@
       "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fbillinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fbillinfor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|d:\\ltcosodulieu\\restaurantmanagementsystem\\quanlynhahang\\quanlynhahang\\dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dao\\dataprovider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\facccoutprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:facccoutprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fadmin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:ftablemaneger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dao\\billdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dao\\billdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:flogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:fregister.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{722C7C8F-DB47-438A-9921-0548CCB8DCF9}|QuanLyNhaHang.csproj|solutionrelative:dao\\accountdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +106,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 25,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,7 +122,184 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Account.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Account.cs",
+              "RelativeDocumentMoniker": "DTO\\Account.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Account.cs",
+              "RelativeToolTip": "DTO\\Account.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:53:03.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APIRequest.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\APIRequest.cs",
+              "RelativeDocumentMoniker": "DTO\\APIRequest.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\APIRequest.cs",
+              "RelativeToolTip": "DTO\\APIRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:53:00.026Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Bank.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Bank.cs",
+              "RelativeDocumentMoniker": "DTO\\Bank.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Bank.cs",
+              "RelativeToolTip": "DTO\\Bank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:59.106Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "Bill.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Bill.cs",
+              "RelativeDocumentMoniker": "DTO\\Bill.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Bill.cs",
+              "RelativeToolTip": "DTO\\Bill.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:58.113Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "BillInfo.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\BillInfo.cs",
+              "RelativeDocumentMoniker": "DTO\\BillInfo.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\BillInfo.cs",
+              "RelativeToolTip": "DTO\\BillInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:57.153Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Category.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Category.cs",
+              "RelativeDocumentMoniker": "DTO\\Category.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Category.cs",
+              "RelativeToolTip": "DTO\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:55.881Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Food.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Food.cs",
+              "RelativeDocumentMoniker": "DTO\\Food.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Food.cs",
+              "RelativeToolTip": "DTO\\Food.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:54.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "MenuDTO.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\MenuDTO.cs",
+              "RelativeDocumentMoniker": "DTO\\MenuDTO.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\MenuDTO.cs",
+              "RelativeToolTip": "DTO\\MenuDTO.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:49.523Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Table.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Table.cs",
+              "RelativeDocumentMoniker": "DTO\\Table.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DTO\\Table.cs",
+              "RelativeToolTip": "DTO\\Table.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:46.042Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "fVnPayQrCode.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fVnPayQrCode.cs",
+              "RelativeDocumentMoniker": "fVnPayQrCode.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fVnPayQrCode.cs",
+              "RelativeToolTip": "fVnPayQrCode.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADwAAABNAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:52:09.897Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "fAcccoutProfile.cs [Design]",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fAcccoutProfile.cs",
+              "RelativeDocumentMoniker": "fAcccoutProfile.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fAcccoutProfile.cs [Design]",
+              "RelativeToolTip": "fAcccoutProfile.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:51:36.979Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "fAdmin.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fAdmin.cs",
+              "RelativeDocumentMoniker": "fAdmin.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fAdmin.cs",
+              "RelativeToolTip": "fAdmin.cs",
+              "ViewState": "AgIAAJIBAAAAAAAAAAAUwEgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:46:40.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "fVnPayQrCode.cs [Design]",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fVnPayQrCode.cs",
+              "RelativeDocumentMoniker": "fVnPayQrCode.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fVnPayQrCode.cs [Design]",
+              "RelativeToolTip": "fVnPayQrCode.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:46:34.265Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "fBillInfor.cs [Design]",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fBillInfor.cs",
+              "RelativeDocumentMoniker": "fBillInfor.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fBillInfor.cs [Design]",
+              "RelativeToolTip": "fBillInfor.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:45:28.678Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "BillDAO.cs",
+              "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DAO\\BillDAO.cs",
+              "RelativeDocumentMoniker": "DAO\\BillDAO.cs",
+              "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DAO\\BillDAO.cs",
+              "RelativeToolTip": "DAO\\BillDAO.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwCAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-03T10:45:11.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
               "Title": "AccountDAO.cs",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DAO\\AccountDAO.cs",
               "RelativeDocumentMoniker": "DAO\\AccountDAO.cs",
@@ -70,12 +307,11 @@
               "RelativeToolTip": "DAO\\AccountDAO.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAawB4AAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:12:28.447Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T05:12:28.447Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 22,
               "Title": "fRegister.cs",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fRegister.cs",
               "RelativeDocumentMoniker": "fRegister.cs",
@@ -83,95 +319,88 @@
               "RelativeToolTip": "fRegister.cs",
               "ViewState": "AgIAABYAAAAAAAAAAAAuwDcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:10:24.566Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T05:10:24.566Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 21,
               "Title": "fLogin.cs",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fLogin.cs",
               "RelativeDocumentMoniker": "fLogin.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fLogin.cs",
               "RelativeToolTip": "fLogin.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAAAC4AAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAiwBQAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T05:09:31.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T05:09:31.253Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 13,
               "Title": "fRegister.cs [Design]",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fRegister.cs",
               "RelativeDocumentMoniker": "fRegister.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fRegister.cs [Design]",
               "RelativeToolTip": "fRegister.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T04:51:14.286Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-03T04:51:14.286Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 19,
               "Title": "fTableManeger.cs",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fTableManeger.cs",
               "RelativeDocumentMoniker": "fTableManeger.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fTableManeger.cs",
               "RelativeToolTip": "fTableManeger.cs",
-              "ViewState": "AgIAAAkBAAAAAAAAAAAuwBkBAABKAAAAAAAAAA==",
+              "ViewState": "AgIAADABAAAAAAAAAAAMwFUAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T04:49:58.318Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-03T04:49:58.318Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 12,
               "Title": "fTableManeger.cs [Design]",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fTableManeger.cs",
               "RelativeDocumentMoniker": "fTableManeger.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fTableManeger.cs [Design]",
               "RelativeToolTip": "fTableManeger.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T04:49:53.013Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-03T04:49:53.013Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 16,
               "Title": "fAdmin.cs [Design]",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fAdmin.cs",
               "RelativeDocumentMoniker": "fAdmin.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fAdmin.cs [Design]",
               "RelativeToolTip": "fAdmin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T04:49:50.247Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-03T04:49:50.247Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "DataProvider.cs",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DAO\\DataProvider.cs",
               "RelativeDocumentMoniker": "DAO\\DataProvider.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\DAO\\DataProvider.cs",
               "RelativeToolTip": "DAO\\DataProvider.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAkwH4AAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-02T09:49:07.577Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "fLogin.cs [Design]",
               "DocumentMoniker": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fLogin.cs",
               "RelativeDocumentMoniker": "fLogin.cs",
               "ToolTip": "D:\\LTCoSoDuLieu\\RestaurantManagementSystem\\QuanLyNhaHang\\QuanLyNhaHang\\fLogin.cs [Design]",
               "RelativeToolTip": "fLogin.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-02T08:57:09.822Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-05-02T08:57:09.822Z"
             }
           ]
         }

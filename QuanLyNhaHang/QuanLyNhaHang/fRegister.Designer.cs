@@ -37,13 +37,13 @@
             this.txbPassWord = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txbDisplayName = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txbConfirmPassword = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txbConfirmPassword = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txbDisplayName = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -148,6 +148,49 @@
             this.panel1.Size = new System.Drawing.Size(526, 550);
             this.panel1.TabIndex = 15;
             // 
+            // txbDisplayName
+            // 
+            this.txbDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbDisplayName.Location = new System.Drawing.Point(214, 201);
+            this.txbDisplayName.Multiline = true;
+            this.txbDisplayName.Name = "txbDisplayName";
+            this.txbDisplayName.Size = new System.Drawing.Size(288, 34);
+            this.txbDisplayName.TabIndex = 18;
+            // 
+            // label2
+            // 
+            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(16, 210);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(136, 25);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Displayname :";
+            // 
+            // txbConfirmPassword
+            // 
+            this.txbConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txbConfirmPassword.Location = new System.Drawing.Point(214, 313);
+            this.txbConfirmPassword.Multiline = true;
+            this.txbConfirmPassword.Name = "txbConfirmPassword";
+            this.txbConfirmPassword.PasswordChar = '*';
+            this.txbConfirmPassword.Size = new System.Drawing.Size(288, 34);
+            this.txbConfirmPassword.TabIndex = 16;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label1.Location = new System.Drawing.Point(16, 322);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 25);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "Confirm Password :";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(121)))), ((int)(((byte)(84)))));
@@ -180,49 +223,6 @@
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
             // 
-            // txbConfirmPassword
-            // 
-            this.txbConfirmPassword.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbConfirmPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txbConfirmPassword.Location = new System.Drawing.Point(214, 313);
-            this.txbConfirmPassword.Multiline = true;
-            this.txbConfirmPassword.Name = "txbConfirmPassword";
-            this.txbConfirmPassword.PasswordChar = '*';
-            this.txbConfirmPassword.Size = new System.Drawing.Size(288, 34);
-            this.txbConfirmPassword.TabIndex = 16;
-            // 
-            // label1
-            // 
-            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label1.Location = new System.Drawing.Point(16, 322);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Confirm Password :";
-            // 
-            // txbDisplayName
-            // 
-            this.txbDisplayName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbDisplayName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txbDisplayName.Location = new System.Drawing.Point(214, 201);
-            this.txbDisplayName.Multiline = true;
-            this.txbDisplayName.Name = "txbDisplayName";
-            this.txbDisplayName.Size = new System.Drawing.Size(288, 34);
-            this.txbDisplayName.TabIndex = 18;
-            // 
-            // label2
-            // 
-            this.label2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label2.Location = new System.Drawing.Point(16, 210);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 25);
-            this.label2.TabIndex = 17;
-            this.label2.Text = "Username : ";
-            // 
             // fRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -231,6 +231,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "fRegister";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fRegister";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
