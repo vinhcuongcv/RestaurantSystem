@@ -28,21 +28,29 @@ namespace QuanLyNhaHang
         {
             string username = txtUserName.Text;
             string password = txtPassWord.Text;
-            if (Login(username , password))
+            if(string.IsNullOrEmpty(username)|| string.IsNullOrEmpty(password))
             {
-                Account account = AccountDAO.Instance.GetAcountByUserName(username);
-                fTableManeger f = new fTableManeger(account);
-                this.Hide();
-                f.ShowDialog();
-                this.Show();
-            }
+                MessageBox.Show("Vui lòng điền đầy đủ thông tin", "Thông báo");
+            }    
             else
             {
-                MessageBox.Show("Bạn nhập sai tài khoản hoặc mật khẩu", "Thông Báo");
-            }
-            txtUserName.Clear();
-            txtPassWord.Clear();
-            txtUserName.Focus();
+                if (Login(username, password))
+                {
+                    Account account = AccountDAO.Instance.GetAcountByUserName(username);
+                    fTableManeger f = new fTableManeger(account);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+
+                    txtUserName.Clear();
+                    txtPassWord.Clear();
+                    txtUserName.Focus();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn nhập sai tài khoản hoặc mật khẩu", "Thông Báo");
+                }
+            }    
         }
         bool Login(string username , string password)
         {
@@ -61,6 +69,14 @@ namespace QuanLyNhaHang
             {
                 e.Cancel = true;
             }
+        }
+
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            fRegister f = new fRegister();
+            f.ShowDialog();
+            this.Show();
         }
     }
 }

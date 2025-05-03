@@ -46,7 +46,13 @@ namespace QuanLyNhaHang.DAO
 
         public bool InsertAccount(string username , string displayname , int type)
         {
-            string query = string.Format("INSERT dbo.Account  (UserName , DisplayName , Type) Values ( N'{0}' , N'{1}'   , {2} )", username, displayname, type);
+            string query = string.Format("INSERT dbo.Account  (UserName , DisplayName , Type) Values ( N'{0}' , N'{1}'  , {2} )", username, displayname, type);
+            int result = DataProvider.Instance.ExcuteNonQuery(query);
+            return result > 0;
+        }
+        public bool InsertAccountRegister(string username , string displayname , string password)
+        {
+            string query = string.Format("EXEC USP_InsertAccount @username = N'{0}' , @displayname = N'{1}' , @password = N'{2}' , @type = {3}", username, displayname, password , 0);
             int result = DataProvider.Instance.ExcuteNonQuery(query);
             return result > 0;
         }

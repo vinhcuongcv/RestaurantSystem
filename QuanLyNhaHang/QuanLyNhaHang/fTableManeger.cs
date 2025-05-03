@@ -279,7 +279,7 @@ namespace QuanLyNhaHang
         {
             int idTable1 = (lvBill.Tag as Table).ID;
             int idTable2 = (cbSwitchTable.SelectedItem as Table).ID;
-            if (MessageBox.Show(String.Format("Bạn có thật sự muốn chuyển bàn {0} sang bàn {1}", (lvBill.Tag as Table).Name, (cbSwitchTable.SelectedItem as Table).Name),"Thông báo",MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK)
+            if (MessageBox.Show(String.Format("Bạn có thật sự muốn chuyển {0} sang bàn {1}", (lvBill.Tag as Table).Name, (cbSwitchTable.SelectedItem as Table).Name),"Thông báo",MessageBoxButtons.OKCancel)== System.Windows.Forms.DialogResult.OK)
             {
                 TableDAO.Instance.SwitchTable(idTable1, idTable2);
                 loadTable();

@@ -36,3 +36,4 @@ D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug
 D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\System.Text.Json.xml
 D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\System.Threading.Tasks.Extensions.xml
 D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\bin\Debug\System.ValueTuple.xml
+D:\LTCoSoDuLieu\RestaurantManagementSystem\QuanLyNhaHang\QuanLyNhaHang\obj\Debug\QuanLyNhaHang.fRegister.resources
